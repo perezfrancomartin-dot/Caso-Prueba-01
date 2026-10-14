@@ -1,0 +1,556 @@
+<title>Norte Solar Gestión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: barra superior con marca y pestañas; vista de seguimiento (resumen, para hoy, lista); ficha de cliente a pantalla completa con secciones. */
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EEF5; --line:#D5DDE8;
+  --fg:#0B2545; --muted:#5A6B82; --accent:#F5B700; --accent-ink:#0B2545;
+  --navy:#0B2545; --ok:#1E8A5A; --warn:#B7791F; --bad:#C0392B; --info:#2F6FB0;
+  --display:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1424; --surface:#111F35; --surface-2:#18294A; --line:#253A5E;
+  --fg:#E8EEF7; --muted:#9AAAC2; --accent:#F5B700; --accent-ink:#0B2545;
+  --navy:#0B2545; --ok:#46C08A; --warn:#E3A93C; --bad:#EF6B5B; --info:#6FA8E6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1424; --surface:#111F35; --surface-2:#18294A; --line:#253A5E;
+  --fg:#E8EEF7; --muted:#9AAAC2; --accent:#F5B700; --accent-ink:#0B2545;
+  --navy:#0B2545; --ok:#46C08A; --warn:#E3A93C; --bad:#EF6B5B; --info:#6FA8E6; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.45}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:#fff}
+header.top .in{max-width:1040px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;letter-spacing:.06em;font-size:15px}
+.brand small{display:block;font-weight:500;letter-spacing:.02em;opacity:.7;font-size:11px}
+nav.tabs{display:flex;gap:4px;margin-left:auto}
+nav.tabs button{background:transparent;border:0;color:#fff;opacity:.75;font:600 14px var(--body);padding:8px 12px;border-radius:8px;cursor:pointer}
+nav.tabs button[aria-current="true"]{opacity:1;background:rgba(255,255,255,.12);box-shadow:inset 0 -2px 0 var(--accent)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h2{font-size:20px;font-weight:700}
+h3{font-size:15px;font-weight:700}
+.muted{color:var(--muted)}
+.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+button,.btn{font:600 14px var(--body);cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:9px 14px}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn-dark{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn-ghost{background:transparent}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--info);outline-offset:2px}
+button:disabled{opacity:.5;cursor:not-allowed}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.spacer{flex:1}
+section.block{margin-top:22px;display:grid;gap:12px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:grid;gap:2px;text-align:left}
+.stat b{font:700 24px var(--mono)}
+.stat.hot{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.list{display:grid;gap:8px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;cursor:pointer;text-align:left;width:100%;font-weight:400}
+.item:hover{border-color:var(--muted)}
+.item .name{font-weight:700;font-size:15px}
+.item .meta{color:var(--muted);font-size:13px;min-width:0;overflow-wrap:anywhere}
+.item .side{display:grid;justify-items:end;gap:4px;align-content:start}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--fg);white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--c,var(--muted));display:inline-block}
+.due{font-size:12px;font-weight:600}
+.due.late{color:var(--bad)} .due.today{color:var(--warn)}
+.filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.filters button{white-space:nowrap;padding:6px 11px;font-size:13px;border-radius:999px}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+input,select,textarea{font:400 15px var(--body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 10px;width:100%;min-width:0}
+textarea{min-height:76px;resize:vertical}
+.field{display:grid;gap:5px;min-width:0}
+.field span{font-size:13px;font-weight:600;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:14px}
+.subtabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto;margin-top:16px}
+.subtabs button{border:0;background:transparent;border-radius:0;padding:10px 12px;color:var(--muted);white-space:nowrap}
+.subtabs button[aria-selected="true"]{color:var(--fg);box-shadow:inset 0 -2px 0 var(--accent)}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.opts{grid-template-columns:minmax(0,1fr)}}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:10px;align-content:start}
+.opt.rec{border-color:var(--accent)}
+.opt .price{font:700 26px var(--mono)}
+table.lines{width:100%;border-collapse:collapse;font-size:13px}
+table.lines td{padding:5px 0;border-bottom:1px dashed var(--line);vertical-align:top}
+table.lines td:last-child{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:10px}
+table.lines tr.tot td{font-weight:700;border-bottom:0;border-top:1px solid var(--fg)}
+.note{font-size:13px;color:var(--muted)}
+.callout{background:var(--surface-2);border-radius:var(--r);padding:12px 14px;font-size:14px}
+.msg{white-space:pre-wrap;font-family:var(--body);background:var(--surface-2);border-radius:var(--r);padding:14px;font-size:14px;max-height:340px;overflow:auto}
+.hist{display:grid;gap:8px}
+.hist div{border-left:2px solid var(--line);padding-left:10px;font-size:14px}
+.hist time{display:block;font-size:12px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;z-index:20}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:22px;display:grid;gap:8px;justify-items:start}
+.banner{background:var(--surface-2);border-radius:var(--r);padding:12px 14px;margin-top:16px;font-size:14px}
+.back{border:0;background:transparent;padding:6px 0;color:var(--muted)}
+.headline{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-top:8px}
+.headline h2{font-size:24px;min-width:0;overflow-wrap:anywhere}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="top"><div class="in">
+  <div class="brand">
+    <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="17" r="6" fill="#F5B700"/><g stroke="#F5B700" stroke-width="2" stroke-linecap="round"><path d="M15 6v2.5M6 17h2.5M21.5 17H24M8.6 10.6l1.8 1.8M21.4 10.6l-1.8 1.8"/></g><path d="M15 1l3 5h-6z" fill="#fff"/></svg>
+    <div>NORTE SOLAR<small>Gestión de clientes</small></div>
+  </div>
+  <nav class="tabs" aria-label="Secciones">
+    <button id="tab-seg" aria-current="true">Seguimiento</button>
+    <button id="tab-precios" aria-current="false">Precios</button>
+  </nav>
+</div></header>
+
+<main class="wrap" id="app"></main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Constantes del negocio ---------- */
+const ESTADOS = [
+  {k:"nuevo", t:"Consulta nueva", c:"var(--info)"},
+  {k:"factura", t:"Factura recibida", c:"var(--info)"},
+  {k:"estimacion", t:"Estimación enviada", c:"var(--info)"},
+  {k:"visita", t:"Visita agendada", c:"var(--warn)"},
+  {k:"relevado", t:"Relevado", c:"var(--warn)"},
+  {k:"aprobar", t:"Presupuesto para aprobar", c:"var(--accent)"},
+  {k:"enviado", t:"Presupuesto enviado", c:"var(--warn)"},
+  {k:"ganado", t:"Ganado", c:"var(--ok)"},
+  {k:"perdido", t:"Perdido", c:"var(--bad)"}
+];
+const EST = Object.fromEntries(ESTADOS.map(e=>[e.k,e]));
+const CERRADOS = ["ganado","perdido"];
+
+const DEFAULTS = {
+  panelW:550, precioPanel:224000,
+  onGrid3:936889, onGrid5:1600000, hibrido5:3916000, hibrido8:5500000,
+  bateriaKwh:5.12, precioBateria:2752700,
+  estructuraPorPanel:60000, electricoFijo:350000, tableroCriticas:250000, varios:150000,
+  moPct:30, moMinima:600000, margenPct:10, valorKm:600,
+  genKwpMes:108, aprovechamiento:90, hsp:3.56,
+  comGustavo:50, comAyudante:20, comOlivia:3,
+  actualizado:"Valores de referencia del 11/10/2026. Actualizar al cotizar."
+};
+const CAMPOS_PRECIOS = [
+  ["Paneles", [["panelW","Potencia del panel (W)"],["precioPanel","Precio por panel ($)"]]],
+  ["Inversores", [["onGrid3","On-grid 3 kW ($)"],["onGrid5","On-grid 5 kW ($)"],["hibrido5","Híbrido 5 kW ($)"],["hibrido8","Híbrido 8 kW ($)"]]],
+  ["Baterías", [["bateriaKwh","Capacidad por batería (kWh)"],["precioBateria","Precio por batería ($)"]]],
+  ["Materiales", [["estructuraPorPanel","Estructura por panel ($)"],["electricoFijo","Cable y protecciones CC/CA ($)"],["tableroCriticas","Tablero de cargas críticas ($)"],["varios","Gabinetes, cañería, tierra, varios ($)"]]],
+  ["Mano de obra y margen", [["moPct","Mano de obra (% de materiales)"],["moMinima","Mano de obra mínima ($)"],["margenPct","Margen sobre materiales (%)"],["valorKm","Viaje: valor por km ($)"]]],
+  ["Generación", [["genKwpMes","kWh por kWp por mes"],["aprovechamiento","Aprovechamiento sin inyección (%)"]]],
+  ["Comisiones", [["comGustavo","Gustavo (% mano de obra)"],["comAyudante","Ayudante (% mano de obra)"],["comOlivia","Olivia (% del total)"]]]
+];
+
+/* ---------- Estado ---------- */
+const S = { db:null, canConfig:null, clientes:[], loaded:false, cfg:{...DEFAULTS}, cfgExists:false,
+  view:"seg", filtro:"abiertos", q:"", abierto:null, sub:"datos", dbMissing:false };
+
+/* ---------- Utilidades ---------- */
+const $ = s => document.querySelector(s);
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = n => "$" + Math.round(Number(n)||0).toLocaleString("es-AR");
+const nf = (n,d=0) => (Number(n)||0).toLocaleString("es-AR",{maximumFractionDigits:d,minimumFractionDigits:d});
+const hoy = () => { const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
+const masDias = n => { const d=new Date(); d.setDate(d.getDate()+n); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
+const fechaCorta = s => { if(!s) return ""; const [y,m,d]=s.split("-"); return d+"/"+m; };
+let toastT; function toast(t){ const el=$("#toast"); el.textContent=t; el.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>el.hidden=true,2200); }
+function chip(k){ const e=EST[k]||EST.nuevo; return `<span class="chip" style="--c:${e.c}"><i></i>${esc(e.t)}</span>`; }
+function dueTxt(c){
+  if(CERRADOS.includes(c.estado) || !c.proximoContacto) return "";
+  const t=hoy(); if(c.proximoContacto<t) return `<span class="due late">Atrasado (${fechaCorta(c.proximoContacto)})</span>`;
+  if(c.proximoContacto===t) return `<span class="due today">Contactar hoy</span>`;
+  return `<span class="due muted">Contactar ${fechaCorta(c.proximoContacto)}</span>`;
+}
+async function copiar(texto, el){
+  try{ await navigator.clipboard.writeText(texto); toast("Copiado"); }
+  catch(e){ if(el){ const r=document.createRange(); r.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(r);} toast("Seleccioná el texto y copialo"); }
+}
+function telLimpio(t){ let d=String(t||"").replace(/\D/g,""); if(!d) return ""; if(d.startsWith("0")) d=d.slice(1); if(!d.startsWith("54")) d="549"+d; return d; }
+
+/* ---------- Cálculo del presupuesto ---------- */
+function calcular(c, cfg){
+  const r = c.relevamiento || {};
+  const consumo = Number(r.consumoMensual)||0;
+  const pctDia = (Number(r.pctDia)||40)/100;
+  const precioKwh = Number(r.precioKwh)||0;
+  const diaMes = consumo*pctDia;
+  const gkwp = Number(cfg.genKwpMes)||108, ap=(Number(cfg.aprovechamiento)||90)/100;
+  let n = Number(r.panelesManual)||0;
+  if(!n){ const kwpObj = diaMes/(gkwp*ap); n = Math.max(2, Math.round(kwpObj*1000/(Number(cfg.panelW)||550))); }
+  const kwp = n*(Number(cfg.panelW)||550)/1000;
+  const tipoA = r.inversorA==="ongrid" ? "ongrid" : "hibrido";
+  const invA = tipoA==="ongrid"
+    ? (kwp<=3.9 ? {t:"Inversor on-grid 3 kW con inyección cero", p:cfg.onGrid3} : {t:"Inversor on-grid 5 kW con inyección cero", p:cfg.onGrid5})
+    : (kwp<=6.5 ? {t:"Inversor híbrido 5 kW (preparado para batería)", p:cfg.hibrido5} : {t:"Inversor híbrido 8 kW (preparado para batería)", p:cfg.hibrido8});
+  const invB = kwp<=6.5 ? {t:"Inversor híbrido 5 kW", p:cfg.hibrido5} : {t:"Inversor híbrido 8 kW", p:cfg.hibrido8};
+  const cargasW = Number(r.cargasW)||200, horas = Number(r.horasRespaldo)||8;
+  const bk = Number(cfg.bateriaKwh)||5.12;
+  const nb = Number(r.bateriasManual)|| Math.max(1, Math.ceil(cargasW*horas/1000/(bk*0.9)));
+  const km = Number(r.kmViaje)||0;
+  const viaje = km*2*(Number(cfg.valorKm)||0);
+
+  function armar(inv, conBat){
+    const lineas = [
+      [`${n} paneles de ${cfg.panelW} W (${nf(kwp,2)} kWp)`, n*cfg.precioPanel],
+      [inv.t, inv.p],
+      [`Estructura de aluminio (${n} paneles)`, n*cfg.estructuraPorPanel],
+      ["Cable solar y protecciones CC/CA", cfg.electricoFijo],
+      ["Gabinetes, cañería, puesta a tierra, varios", cfg.varios]
+    ];
+    if(conBat){ lineas.push([`${nb} batería(s) de litio de ${nf(bk,2)} kWh`, nb*cfg.precioBateria]); lineas.push(["Tablero de cargas críticas", cfg.tableroCriticas]); }
+    const mat = lineas.reduce((s,l)=>s+(Number(l[1])||0),0);
+    const mo = Math.max(mat*(cfg.moPct/100), Number(cfg.moMinima)||0);
+    const margen = mat*(cfg.margenPct/100);
+    const total = mat+mo+margen+viaje;
+    const gen = kwp*gkwp;
+    const aprovA = Math.min(gen*ap, diaMes);
+    let aprov = aprovA;
+    if(conBat){ const exced=Math.max(0, gen-aprovA); const noche=Math.max(0, consumo-diaMes); aprov += Math.min(exced*0.9, noche, nb*bk*0.9*30); }
+    const ahorroMes = aprov*precioKwh;
+    const recupero = ahorroMes>0 ? total/(ahorroMes*12) : null;
+    return {lineas, mat, mo, margen, viaje, total, gen, aprov, ahorroMes, recupero,
+      com:{gustavo:mo*cfg.comGustavo/100, ayudante:mo*cfg.comAyudante/100, olivia:total*cfg.comOlivia/100, empresa:mo*(1-(cfg.comGustavo+cfg.comAyudante)/100)+margen-total*cfg.comOlivia/100}};
+  }
+  return { n, kwp, nb, bk, cargasW, horas, diaMes, consumo, precioKwh, km,
+    A: armar(invA,false), B: armar(invB,true), invA, invB, tipoA };
+}
+
+function mensajeWhatsApp(c, calc){
+  const p = c.presupuesto || {};
+  const finalA = Number(p.ajusteA)||calc.A.total, finalB = Number(p.ajusteB)||calc.B.total;
+  const nombre = (c.nombre||"").split(" ")[0] || "";
+  const lineas = [
+    `¡Hola${nombre?" "+nombre:""}! Te paso el presupuesto de Norte Solar${c.zona?" para tu casa en "+c.zona:""}:`,
+    ``,
+    `☀️ Opción 1 – Ahorro (sin batería)`,
+    `${calc.n} paneles de ${S.cfg.panelW} W (${nf(calc.kwp,2)} kWp) + ${calc.invA.t.toLowerCase()}.`,
+    `Precio final: ${money(finalA)}`,
+    calc.A.ahorroMes>0 ? `Ahorro estimado: ~${money(calc.A.ahorroMes)} por mes.` : ``,
+    `En un corte de luz el sistema se apaga por seguridad.`,
+    ``,
+    `🔋 Opción 2 – Ahorro + luz en los cortes`,
+    `Lo mismo + ${calc.nb} batería(s) de litio de ${nf(calc.bk,2)} kWh para ${c.relevamiento?.cargasTexto || "heladera, luces y lo básico"}.`,
+    `Precio final: ${money(finalB)}`,
+    calc.B.ahorroMes>0 ? `Ahorro estimado: ~${money(calc.B.ahorroMes)} por mes.` : ``,
+    ``,
+    `Incluye materiales, instalación, puesta en marcha, app de monitoreo y garantía por escrito.`,
+    `Validez: 7 días. Forma de pago: 50 % de anticipo y saldo al terminar.`,
+    `El ahorro es estimado y depende del sol y del uso de la casa.`,
+    p.notaCliente ? `\n${p.notaCliente}` : ``,
+    ``,
+    `¿Lo charlamos? Cualquier duda te la respondo.`
+  ];
+  return lineas.filter((l,i,a)=>!(l===""&&a[i-1]==="")).join("\n").replace(/\n{3,}/g,"\n\n");
+}
+const SEGUIMIENTO = {
+  nuevo:"¡Hola! Gracias por escribirnos ☀️ Para calcularte cuánto podés ahorrar, ¿me decís en qué barrio está la casa, si te interesa más ahorrar o tener luz en los cortes, y me mandás una foto de tu última factura de luz?",
+  factura:"¡Gracias por la factura! Te mando tu estimación de ahorro en menos de 24 h.",
+  estimacion:"¡Hola! ¿Pudiste ver la estimación? Para darte el presupuesto exacto necesitamos ver el techo y el tablero. ¿Te queda bien que pasemos esta semana? La visita no tiene costo.",
+  visita:"¡Hola! Te confirmo la visita. Cualquier cambio avisame por acá.",
+  relevado:"¡Gracias por recibirnos! Estamos armando tu presupuesto y te lo mandamos en estos días.",
+  aprobar:"",
+  enviado:"¡Hola! ¿Pudiste ver el presupuesto? Si querés lo vemos juntos y te explico cada opción.",
+  ganado:"¡Hola! ¿Cómo viene funcionando el sistema? Si quedaste conforme, nos ayudaría muchísimo una reseña en Google.",
+  perdido:""
+};
+
+/* ---------- Render ---------- */
+function render(){
+  $("#tab-seg").setAttribute("aria-current", S.view!=="precios");
+  $("#tab-precios").setAttribute("aria-current", S.view==="precios");
+  const app = $("#app");
+  if(S.view==="precios") app.innerHTML = vistaPrecios();
+  else if(S.abierto) app.innerHTML = vistaCliente();
+  else app.innerHTML = vistaSeguimiento();
+}
+
+function vistaSeguimiento(){
+  const t = hoy();
+  const abiertos = S.clientes.filter(c=>!CERRADOS.includes(c.estado));
+  const paraHoy = abiertos.filter(c=>c.proximoContacto && c.proximoContacto<=t).sort((a,b)=>a.proximoContacto<b.proximoContacto?-1:1);
+  const aprobar = S.clientes.filter(c=>c.estado==="aprobar");
+  const mes = t.slice(0,7);
+  const ganadosMes = S.clientes.filter(c=>c.estado==="ganado" && (c.cerradoEl||"").startsWith(mes));
+  let lista = S.clientes.slice();
+  if(S.filtro==="abiertos") lista = abiertos;
+  else if(S.filtro!=="todos") lista = lista.filter(c=>c.estado===S.filtro);
+  const q = S.q.trim().toLowerCase();
+  if(q) lista = lista.filter(c=>[c.nombre,c.zona,c.telefono,c.origen].join(" ").toLowerCase().includes(q));
+  lista.sort((a,b)=>(b.actualizado||"").localeCompare(a.actualizado||""));
+
+  const banner = S.dbMissing ? `<div class="banner">Para ver y guardar clientes, abrí esta página desde claude.ai con tu cuenta. Así Olivia, Gustavo y vos ven los mismos datos.</div>` : "";
+  const filtros = [["abiertos","Abiertos"],...ESTADOS.map(e=>[e.k,e.t]),["todos","Todos"]]
+    .map(([k,t])=>`<button data-filtro="${k}" aria-pressed="${S.filtro===k}">${esc(t)}</button>`).join("");
+
+  return `${banner}
+  <div class="row" style="margin-top:20px">
+    <h2>Seguimiento</h2><span class="spacer"></span>
+    <button class="btn-primary" id="nuevo" ${S.db?"":"disabled"}>+ Nueva consulta</button>
+  </div>
+  <div class="stats">
+    <button class="stat ${paraHoy.length?"hot":""}" data-filtro-hoy><span class="lbl">Para contactar hoy</span><b>${paraHoy.length}</b></button>
+    <button class="stat ${aprobar.length?"hot":""}" data-filtro="aprobar"><span class="lbl">Presupuestos para aprobar</span><b>${aprobar.length}</b></button>
+    <button class="stat" data-filtro="abiertos"><span class="lbl">Consultas abiertas</span><b>${abiertos.length}</b></button>
+    <button class="stat" data-filtro="ganado"><span class="lbl">Obras ganadas este mes</span><b>${ganadosMes.length}</b></button>
+  </div>
+  ${paraHoy.length ? `<section class="block"><h3>Para contactar hoy</h3><div class="list">${paraHoy.map(fila).join("")}</div></section>`:""}
+  <section class="block">
+    <div class="row"><h3>Clientes</h3><span class="spacer"></span>
+      <input id="buscar" type="search" placeholder="Buscar por nombre, zona o teléfono" value="${esc(S.q)}" style="max-width:300px"></div>
+    <div class="filters">${filtros}</div>
+    <div class="list">${!S.loaded && !S.dbMissing ? `<div class="empty"><span class="muted">Cargando clientes…</span></div>` :
+      lista.length ? lista.map(fila).join("") :
+      `<div class="empty"><h3>${S.clientes.length?"No hay clientes en este filtro":"Todavía no hay consultas"}</h3>
+       <span class="muted">Cada vez que alguien escriba por WhatsApp o por un anuncio, cargalo con "+ Nueva consulta". Desde la ficha se carga el relevamiento y el presupuesto se arma solo.</span></div>`}
+    </div>
+  </section>`;
+}
+function fila(c){
+  const meta = [c.zona, c.telefono, c.origen && ("vino por "+c.origen)].filter(Boolean).map(esc).join(" · ");
+  return `<button class="item" data-abrir="${esc(c.id)}">
+    <div style="min-width:0"><div class="name">${esc(c.nombre||"Sin nombre")}</div><div class="meta">${meta||"Sin datos de contacto"}</div></div>
+    <div class="side">${chip(c.estado)}${dueTxt(c)}</div></button>`;
+}
+
+function vistaCliente(){
+  const c = S.clientes.find(x=>x.id===S.abierto);
+  if(!c) return `<button class="back" id="volver">← Volver</button><div class="empty">Este cliente ya no existe.</div>`;
+  const subs = [["datos","Datos"],["relevamiento","Relevamiento"],["presupuesto","Presupuesto"],["historial","Historial"]];
+  return `<div style="margin-top:14px"><button class="back" id="volver">← Volver a seguimiento</button></div>
+  <div class="headline"><h2>${esc(c.nombre||"Sin nombre")}</h2>${chip(c.estado)}<span class="spacer"></span>${dueTxt(c)}</div>
+  <div class="panel" style="margin-top:14px">
+    <div class="grid3">
+      <label class="field"><span>Etapa</span><select id="f-estado">${ESTADOS.map(e=>`<option value="${e.k}" ${c.estado===e.k?"selected":""}>${esc(e.t)}</option>`).join("")}</select></label>
+      <label class="field"><span>Próximo contacto</span><input id="f-prox" type="date" value="${esc(c.proximoContacto||"")}"></label>
+      <div class="field"><span>Registrar contacto de hoy</span><div class="row">
+        <button data-contacto="1">+1 día</button><button data-contacto="3">+3 días</button><button data-contacto="7">+7 días</button></div></div>
+    </div>
+    ${SEGUIMIENTO[c.estado] ? `<div><div class="lbl" style="margin-bottom:6px">Mensaje sugerido para esta etapa</div>
+      <div class="msg" id="msg-seg">${esc(SEGUIMIENTO[c.estado])}</div>
+      <div class="row" style="margin-top:8px"><button id="copiar-seg">Copiar mensaje</button>${telLimpio(c.telefono)?`<a class="btn btn-ghost" href="https://wa.me/${telLimpio(c.telefono)}?text=${encodeURIComponent(SEGUIMIENTO[c.estado])}" target="_blank" rel="noopener">Abrir WhatsApp</a>`:""}</div></div>`:""}
+  </div>
+  <div class="subtabs" role="tablist">${subs.map(([k,t])=>`<button role="tab" data-sub="${k}" aria-selected="${S.sub===k}">${t}</button>`).join("")}</div>
+  <div style="margin-top:16px">${S.sub==="datos"?subDatos(c):S.sub==="relevamiento"?subRelev(c):S.sub==="presupuesto"?subPresu(c):subHist(c)}</div>`;
+}
+function subDatos(c){
+  return `<form class="panel" id="form-datos">
+    <div class="grid2">
+      <label class="field"><span>Nombre</span><input id="d-nombre" value="${esc(c.nombre)}"></label>
+      <label class="field"><span>WhatsApp</span><input id="d-telefono" inputmode="tel" value="${esc(c.telefono)}" placeholder="11 2345 6789"></label>
+      <label class="field"><span>Barrio / localidad</span><input id="d-zona" value="${esc(c.zona)}" placeholder="Nordelta, San Isidro…"></label>
+      <label class="field"><span>¿De dónde vino?</span><input id="d-origen" value="${esc(c.origen)}" placeholder="Anuncio cortes, referido de Gustavo…"></label>
+      <label class="field"><span>Qué busca</span><select id="d-objetivo">
+        ${[["","Sin definir"],["ahorro","Ahorrar en la factura"],["cortes","Luz en los cortes"],["ambos","Las dos cosas"]].map(([v,t])=>`<option value="${v}" ${c.objetivo===v?"selected":""}>${t}</option>`).join("")}</select></label>
+      <label class="field"><span>Para cuándo lo quiere</span><input id="d-plazo" value="${esc(c.plazo)}" placeholder="Antes del verano"></label>
+    </div>
+    <label class="field"><span>Notas</span><textarea id="d-notas">${esc(c.notas)}</textarea></label>
+    <div class="row"><button class="btn-dark" type="submit">Guardar datos</button><span class="spacer"></span><button type="button" id="borrar" class="btn-ghost">Eliminar cliente</button></div>
+    <div id="confirm-borrar" hidden class="callout row"><span>¿Eliminar a ${esc(c.nombre||"este cliente")} y todo su historial?</span><span class="spacer"></span><button type="button" id="borrar-no">Cancelar</button><button type="button" id="borrar-si" style="border-color:var(--bad);color:var(--bad)">Sí, eliminar</button></div>
+  </form>`;
+}
+function subRelev(c){
+  const r = c.relevamiento||{};
+  const f = (id,label,val,extra="") => `<label class="field"><span>${label}</span><input id="r-${id}" value="${esc(val??"")}" ${extra}></label>`;
+  return `<form class="panel" id="form-relev">
+    <p class="note" style="margin:0">Completalo durante o después de la visita. Al guardar, el presupuesto se recalcula solo y pasa a "Presupuesto para aprobar".</p>
+    <h3>Consumo</h3>
+    <div class="grid3">
+      ${f("consumoMensual","Consumo mensual (kWh)",r.consumoMensual,'inputmode="decimal" placeholder="300"')}
+      ${f("pctDia","% del consumo que es de día",r.pctDia ?? 40,'inputmode="decimal"')}
+      ${f("precioKwh","Precio del kWh con impuestos ($)",r.precioKwh,'inputmode="decimal" placeholder="180"')}
+    </div>
+    <h3>Techo e instalación</h3>
+    <div class="grid3">
+      <label class="field"><span>Tipo de techo</span><select id="r-techo">${["","Chapa","Teja","Losa","Otro"].map(v=>`<option ${r.techo===v?"selected":""} value="${v}">${v||"Sin definir"}</option>`).join("")}</select></label>
+      <label class="field"><span>Conexión</span><select id="r-fase">${["Monofásica","Trifásica"].map(v=>`<option ${r.fase===v?"selected":""}>${v}</option>`).join("")}</select></label>
+      ${f("kmViaje","Km de viaje (solo fuera de zona)",r.kmViaje,'inputmode="decimal" placeholder="0"')}
+    </div>
+    <h3>Opción sin batería</h3>
+    <div class="grid2">
+      <label class="field"><span>Inversor</span><select id="r-inversorA">
+        <option value="hibrido" ${r.inversorA!=="ongrid"?"selected":""}>Híbrido (puede sumar batería después)</option>
+        <option value="ongrid" ${r.inversorA==="ongrid"?"selected":""}>On-grid (más económico)</option></select></label>
+      ${f("panelesManual","Cantidad de paneles (vacío = automático)",r.panelesManual,'inputmode="numeric"')}
+    </div>
+    <h3>Respaldo en cortes (opción con batería)</h3>
+    <div class="grid3">
+      ${f("cargasTexto","Qué tiene que andar",r.cargasTexto,'placeholder="Heladera, luces, router"')}
+      ${f("cargasW","Consumo de esas cargas (W)",r.cargasW ?? 200,'inputmode="decimal"')}
+      ${f("horasRespaldo","Horas de respaldo",r.horasRespaldo ?? 8,'inputmode="decimal"')}
+    </div>
+    ${f("bateriasManual","Cantidad de baterías (vacío = automático)",r.bateriasManual,'inputmode="numeric"')}
+    <label class="field"><span>Observaciones del relevamiento</span><textarea id="r-obs">${esc(r.obs)}</textarea></label>
+    <div class="row"><button class="btn-dark" type="submit">Guardar y armar presupuesto</button></div>
+  </form>`;
+}
+function bloqueOpcion(titulo, o, ajusteId, ajusteVal, rec, desc){
+  const final = Number(ajusteVal)||o.total;
+  return `<div class="opt ${rec?"rec":""}">
+    <div class="row"><h3>${titulo}</h3>${rec?`<span class="chip" style="--c:var(--accent)"><i></i>Recomendada</span>`:""}</div>
+    <div class="note">${desc}</div>
+    <table class="lines"><tbody>
+      ${o.lineas.map(l=>`<tr><td>${esc(l[0])}</td><td>${money(l[1])}</td></tr>`).join("")}
+      <tr><td>Mano de obra</td><td>${money(o.mo)}</td></tr>
+      <tr><td>Margen sobre materiales</td><td>${money(o.margen)}</td></tr>
+      ${o.viaje?`<tr><td>Viaje</td><td>${money(o.viaje)}</td></tr>`:""}
+      <tr class="tot"><td>Total calculado</td><td>${money(o.total)}</td></tr>
+    </tbody></table>
+    <label class="field"><span>Precio final para el cliente (vacío = usar el calculado)</span><input id="${ajusteId}" inputmode="decimal" value="${esc(ajusteVal??"")}" placeholder="${Math.round(o.total)}"></label>
+    <div><span class="lbl">Precio final</span><div class="price">${money(final)}</div></div>
+    <div class="callout">Genera ~<b class="num">${nf(o.gen)}</b> kWh/mes y aprovecha ~<b class="num">${nf(o.aprov)}</b> kWh.<br>
+      Ahorro estimado: <b class="num">${o.ahorroMes?money(o.ahorroMes):"falta el precio del kWh"}</b>${o.ahorroMes?" por mes":""}${o.recupero?` · recupero ~<b class="num">${nf(o.recupero,1)}</b> años`:""}</div>
+    <details><summary class="note">Comisiones de esta opción</summary>
+      <table class="lines"><tbody>
+        <tr><td>Gustavo (${S.cfg.comGustavo}% mano de obra)</td><td>${money(o.com.gustavo)}</td></tr>
+        <tr><td>Ayudante (${S.cfg.comAyudante}% mano de obra)</td><td>${money(o.com.ayudante)}</td></tr>
+        <tr><td>Olivia (${S.cfg.comOlivia}% del total)</td><td>${money(o.com.olivia)}</td></tr>
+        <tr class="tot"><td>Queda para la empresa</td><td>${money(o.com.empresa)}</td></tr>
+      </tbody></table></details>
+  </div>`;
+}
+function subPresu(c){
+  const r = c.relevamiento||{};
+  if(!Number(r.consumoMensual)) return `<div class="empty"><h3>Falta el relevamiento</h3><span class="muted">Cargá al menos el consumo mensual en la pestaña Relevamiento y el presupuesto se arma solo.</span><button data-sub="relevamiento" class="btn-primary">Ir al relevamiento</button></div>`;
+  const calc = calcular(c, S.cfg); const p = c.presupuesto||{};
+  const recB = c.objetivo==="cortes"||c.objetivo==="ambos";
+  const msg = mensajeWhatsApp(c, calc);
+  const estadoP = p.estado==="enviado" ? `Enviado el ${fechaCorta(p.enviadoEl)}` : p.estado==="aprobado" ? "Aprobado, listo para enviar" : "Borrador: revisalo y aprobalo";
+  return `<div class="callout row" style="margin-bottom:12px"><b>Estado del presupuesto:</b><span>${esc(estadoP)}</span></div>
+  <div class="note" style="margin-bottom:12px">Calculado con ${calc.n} paneles (${nf(calc.kwp,2)} kWp) para ~${nf(calc.diaMes)} kWh/mes de consumo de día. Los precios salen de la pestaña Precios: ${esc(S.cfg.actualizado||"")}</div>
+  <div class="opts">
+    ${bloqueOpcion("Opción 1 · Ahorro", calc.A, "p-ajusteA", p.ajusteA, !recB, "Sin batería. En un corte de luz se apaga por seguridad.")}
+    ${bloqueOpcion("Opción 2 · Ahorro + cortes", calc.B, "p-ajusteB", p.ajusteB, recB, `Con ${calc.nb} batería(s): respalda ~${nf(calc.cargasW)} W durante ~${nf(calc.horas)} h.`)}
+  </div>
+  <div class="panel" style="margin-top:14px">
+    <label class="field"><span>Nota para el cliente (opcional, va al final del mensaje)</span><textarea id="p-nota">${esc(p.notaCliente)}</textarea></label>
+    <div class="row"><button id="guardar-presu">Guardar cambios</button><button class="btn-primary" id="aprobar">Aprobar presupuesto</button></div>
+    ${p.estado==="aprobado"||p.estado==="enviado" ? `
+      <div><div class="lbl" style="margin-bottom:6px">Mensaje para el cliente</div><div class="msg" id="msg-presu">${esc(msg)}</div></div>
+      <div class="row"><button id="copiar-presu">Copiar mensaje</button>
+        ${telLimpio(c.telefono)?`<a class="btn btn-ghost" href="https://wa.me/${telLimpio(c.telefono)}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Abrir WhatsApp</a>`:""}
+        <button class="btn-dark" id="marcar-enviado">Marcar como enviado</button></div>
+      <p class="note" style="margin:0">Al marcarlo como enviado, el próximo contacto queda para mañana.</p>` : `<p class="note" style="margin:0">Cuando lo apruebes, aparece el mensaje listo para mandar por WhatsApp.</p>`}
+  </div>`;
+}
+function subHist(c){
+  const h = (c.historial||[]).slice().reverse();
+  return `<form class="panel" id="form-hist">
+    <label class="field"><span>Agregar nota</span><textarea id="h-texto" placeholder="Llamé, dijo que lo charla con la familia…"></textarea></label>
+    <div class="row"><button class="btn-dark" type="submit">Agregar</button></div>
+  </form>
+  <div class="hist" style="margin-top:14px">${h.length?h.map(e=>`<div><time>${esc(e.fecha)}</time>${esc(e.texto)}</div>`).join(""):`<span class="muted">Sin movimientos todavía.</span>`}</div>`;
+}
+function vistaPrecios(){
+  const dis = S.canConfig===false ? "disabled" : "";
+  return `<div class="row" style="margin-top:20px"><h2>Precios y parámetros</h2></div>
+  <p class="muted">Con estos valores se arma cada presupuesto. Actualizalos cuando cotices con los proveedores.${S.canConfig===false?" Solo el dueño o un editor puede cambiarlos.":""}</p>
+  <form class="panel" id="form-precios">
+    <label class="field"><span>Nota de actualización</span><input id="c-actualizado" value="${esc(S.cfg.actualizado||"")}" ${dis}></label>
+    ${CAMPOS_PRECIOS.map(([g,cs])=>`<h3>${g}</h3><div class="grid2">${cs.map(([k,t])=>`<label class="field"><span>${t}</span><input id="c-${k}" inputmode="decimal" value="${esc(S.cfg[k])}" ${dis}></label>`).join("")}</div>`).join("")}
+    <div class="row"><button class="btn-dark" type="submit" ${dis||(S.db?"":"disabled")}>Guardar precios</button>${S.cfgExists?"":`<span class="note">Hoy se usan los valores de referencia de la planilla de compras.</span>`}</div>
+  </form>`;
+}
+
+/* ---------- Escrituras ---------- */
+const ahoraISO = () => new Date().toISOString();
+function nota(c, texto){ const h=(c.historial||[]).slice(-49); h.push({fecha:new Date().toLocaleString("es-AR",{dateStyle:"short",timeStyle:"short"}), texto}); return h; }
+async function actualizar(c, cambios, msgOk="Guardado"){
+  if(!S.db) return;
+  try{ await S.db.collection("clientes").doc(c.id).update({...cambios, actualizado:ahoraISO()}); toast(msgOk); }
+  catch(e){ toast(e?.code==="invalid_argument" ? "No tenés permiso para editar" : "No se pudo guardar. Probá de nuevo."); }
+}
+const val = id => { const el=document.getElementById(id); return el ? el.value.trim() : ""; };
+const numOrEmpty = id => { const v=val(id).replace(/\./g,"").replace(",","."); return v===""?"":Number(v); };
+
+/* ---------- Eventos ---------- */
+document.addEventListener("click", async ev=>{
+  const t = ev.target.closest("button, [data-abrir]"); if(!t) return;
+  if(t.id==="tab-seg"){ S.view="seg"; S.abierto=null; render(); return; }
+  if(t.id==="tab-precios"){ S.view="precios"; render(); return; }
+  if(t.dataset.filtro){ S.filtro=t.dataset.filtro; S.abierto=null; render(); return; }
+  if(t.hasAttribute("data-filtro-hoy")){ S.filtro="abiertos"; render(); return; }
+  if(t.dataset.abrir){ S.abierto=t.dataset.abrir; S.sub="datos"; render(); window.scrollTo(0,0); return; }
+  if(t.id==="volver"){ S.abierto=null; render(); return; }
+  if(t.dataset.sub){ S.sub=t.dataset.sub; render(); return; }
+  if(t.id==="nuevo" && S.db){
+    try{ const ref = await S.db.collection("clientes").add({nombre:"Nueva consulta", estado:"nuevo", proximoContacto:hoy(), creado:ahoraISO(), actualizado:ahoraISO(), historial:[{fecha:new Date().toLocaleString("es-AR",{dateStyle:"short",timeStyle:"short"}),texto:"Consulta creada"}]});
+      S.abierto=ref.id; S.sub="datos"; render(); toast("Consulta creada"); }
+    catch(e){ toast(e?.code==="quota_exceeded"?"Se llenó la base de datos: borrá clientes viejos.":"No se pudo crear. Revisá tu permiso de edición."); }
+    return;
+  }
+  const c = S.clientes.find(x=>x.id===S.abierto);
+  if(!c) return;
+  if(t.dataset.contacto){ const d=Number(t.dataset.contacto); await actualizar(c,{proximoContacto:masDias(d), historial:nota(c,`Contactado. Próximo contacto en ${d} día(s).`)},"Contacto registrado"); return; }
+  if(t.id==="copiar-seg"){ copiar(SEGUIMIENTO[c.estado], $("#msg-seg")); return; }
+  if(t.id==="copiar-presu"){ copiar($("#msg-presu").textContent, $("#msg-presu")); return; }
+  if(t.id==="borrar"){ $("#confirm-borrar").hidden=false; return; }
+  if(t.id==="borrar-no"){ $("#confirm-borrar").hidden=true; return; }
+  if(t.id==="borrar-si"){ try{ await S.db.collection("clientes").doc(c.id).delete(); S.abierto=null; render(); toast("Cliente eliminado"); }catch(e){ toast("No se pudo eliminar"); } return; }
+  if(t.id==="guardar-presu" || t.id==="aprobar"){
+    const p = {...(c.presupuesto||{}), ajusteA:numOrEmpty("p-ajusteA"), ajusteB:numOrEmpty("p-ajusteB"), notaCliente:val("p-nota")};
+    const cambios = {presupuesto:p};
+    if(t.id==="aprobar"){ p.estado="aprobado"; p.aprobadoEl=hoy(); cambios.historial=nota(c,"Presupuesto aprobado"); }
+    await actualizar(c, cambios, t.id==="aprobar"?"Presupuesto aprobado":"Guardado"); return;
+  }
+  if(t.id==="marcar-enviado"){
+    const calc=calcular(c,S.cfg); const p={...(c.presupuesto||{}), estado:"enviado", enviadoEl:hoy(), totalA:Number(c.presupuesto?.ajusteA)||Math.round(calc.A.total), totalB:Number(c.presupuesto?.ajusteB)||Math.round(calc.B.total)};
+    await actualizar(c,{presupuesto:p, estado:"enviado", proximoContacto:masDias(1), historial:nota(c,"Presupuesto enviado al cliente")},"Marcado como enviado"); return;
+  }
+});
+document.addEventListener("change", async ev=>{
+  const c = S.clientes.find(x=>x.id===S.abierto); if(!c) return;
+  if(ev.target.id==="f-estado"){ const e=ev.target.value; const cambios={estado:e, historial:nota(c,`Etapa: ${EST[e].t}`)}; if(e==="ganado") cambios.cerradoEl=hoy(); await actualizar(c,cambios); }
+  if(ev.target.id==="f-prox"){ await actualizar(c,{proximoContacto:ev.target.value}); }
+});
+document.addEventListener("input", ev=>{ if(ev.target.id==="buscar"){ S.q=ev.target.value; const pos=ev.target.selectionStart; render(); const b=$("#buscar"); if(b){ b.focus(); b.setSelectionRange(pos,pos);} } });
+document.addEventListener("submit", async ev=>{
+  ev.preventDefault();
+  const c = S.clientes.find(x=>x.id===S.abierto);
+  if(ev.target.id==="form-datos" && c){
+    await actualizar(c,{nombre:val("d-nombre"), telefono:val("d-telefono"), zona:val("d-zona"), origen:val("d-origen"), objetivo:val("d-objetivo"), plazo:val("d-plazo"), notas:val("d-notas")});
+  }
+  if(ev.target.id==="form-relev" && c){
+    const r = {consumoMensual:numOrEmpty("r-consumoMensual"), pctDia:numOrEmpty("r-pctDia"), precioKwh:numOrEmpty("r-precioKwh"), techo:val("r-techo"), fase:val("r-fase"), kmViaje:numOrEmpty("r-kmViaje"), inversorA:val("r-inversorA"), panelesManual:numOrEmpty("r-panelesManual"), cargasTexto:val("r-cargasTexto"), cargasW:numOrEmpty("r-cargasW"), horasRespaldo:numOrEmpty("r-horasRespaldo"), bateriasManual:numOrEmpty("r-bateriasManual"), obs:val("r-obs")};
+    const cambios = {relevamiento:r, historial:nota(c,"Relevamiento cargado")};
+    if(!["aprobar","enviado","ganado","perdido"].includes(c.estado)){ cambios.estado="aprobar"; cambios.presupuesto={...(c.presupuesto||{}), estado:"borrador"}; }
+    await actualizar(c, cambios, "Presupuesto armado"); S.sub="presupuesto"; render();
+  }
+  if(ev.target.id==="form-hist" && c){ const tx=val("h-texto"); if(tx) await actualizar(c,{historial:nota(c,tx)},"Nota agregada"); }
+  if(ev.target.id==="form-precios" && S.db){
+    const nuevo = {actualizado:val("c-actualizado")};
+    CAMPOS_PRECIOS.forEach(([,cs])=>cs.forEach(([k])=>{ const v=numOrEmpty("c-"+k); nuevo[k]= v===""?DEFAULTS[k]:v; }));
+    try{ await S.db.doc("config/precios").set(nuevo); toast("Precios guardados"); }
+    catch(e){ toast("Solo el dueño o un editor puede cambiar los precios"); }
+  }
+});
+
+/* ---------- Arranque ---------- */
+render();
+(async()=>{
+  const db = await window.claude?.use?.("db");
+  if(!db){ S.dbMissing=true; render(); return; }
+  S.db = db;
+  try{ const user = await window.claude.use("user"); if(user) S.canConfig = await user.canEdit(); }catch(e){}
+  db.collection("clientes").onSnapshot(snap=>{
+    S.clientes = snap.docs.filter(d=>d.exists).map(d=>({id:d.id, ...d.data()}));
+    S.loaded = true;
+    const foco=document.activeElement; const enForm = foco && foco.closest && foco.closest("form") && ["INPUT","TEXTAREA","SELECT"].includes(foco.tagName);
+    if(!enForm) render();
+  }, ()=>{ S.loaded=true; render(); });
+  db.doc("config/precios").onSnapshot(s=>{
+    if(s.exists){ S.cfg={...DEFAULTS, ...s.data()}; S.cfgExists=true; } else { S.cfg={...DEFAULTS}; S.cfgExists=false; }
+    if(S.view!=="precios") render();
+  }, ()=>{});
+})();
+})();
+</script>

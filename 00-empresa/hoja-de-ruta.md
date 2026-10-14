@@ -3,16 +3,17 @@
 Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 
 ## Etapa 1: Base (semanas 1 y 2)
-- [ ] Elegir el nombre de la marca (ver `nombre-de-marca.md`)
+- [x] Elegir el nombre de la marca: Norte Solar
 - [ ] Verificar que el nombre esté libre: Instagram, Facebook, dominio .com.ar en NIC.ar, marca en INPI
-- [ ] Validar las comisiones de Gustavo y Olivia (ver `equipo-y-comisiones.md`) y firmar el acuerdo simple
+- [x] Validar las comisiones de Gustavo y Olivia
+- [ ] Firmar el acuerdo simple de comisiones
 - [ ] Alta de monotributo: dueño, Gustavo y Olivia (ver `01-legal-admin/checklist-alta.md`)
 - [ ] Iniciar el trámite de matrícula del dueño en el Colegio de Técnicos
 - [ ] Seguro de accidentes personales y de responsabilidad civil
 - [ ] Cuenta bancaria o billetera separada para la empresa
 
 ## Etapa 2: Marca y canales (semanas 2 y 3)
-- [ ] Logo y colores (Claude arma propuestas en Canva)
+- [x] Logo y colores (ver `marca.md`)
 - [ ] Mail de la empresa, WhatsApp Business con número propio
 - [ ] Instagram, Facebook y página en Meta Business Suite
 - [ ] Perfil de Empresa en Google (Maps)
@@ -20,7 +21,8 @@ Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 - [ ] Respuestas rápidas y catálogo en WhatsApp Business (ver `07-atencion-cliente/`)
 
 ## Etapa 3: Operación lista (semanas 3 y 4)
-- [ ] Planilla calculadora de presupuestos
+- [x] Sistema de seguimiento y presupuestos automáticos (`08-sistema/`)
+- [ ] Cotizar los precios estimados del sistema (estructura, protecciones, inversores grandes)
 - [ ] Modelo de presupuesto con logo (2 opciones: sin batería y con batería)
 - [ ] Checklist de obra y acta de entrega
 - [ ] Cuenta en 1 o 2 proveedores (Enertik, Hissuma)

@@ -24,7 +24,7 @@ Relevado el 14/10/2026 (fuentes al final). **Revisá los precios actuales en su 
 
 ## El flujo de trabajo
 1. **Guion**: sale de `ganchos-y-guiones.md`. Claude lo divide en escenas y escribe un prompt por escena.
-2. **Generar clips**: Claude Code puede escribir un script que llame a la API de APIMart y genere todas las escenas de una vez.
+2. **Generar clips**: a mano desde la web de APIMart, copiando los prompts que prepara Claude escena por escena.
 3. **Voz y música**: TTS + Suno, o grabar la voz real del dueño con el celular (suele generar más confianza).
 4. **Edición**: unir clips, subtítulos, logo y llamado a la acción. Con CapCut (gratis) o Canva.
 5. **Revisión**: que nada parezca una obra o un cliente real si no lo es.

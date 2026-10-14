@@ -1,6 +1,6 @@
 # Contexto para Claude
 
-Este repositorio es el "cerebro" de una empresa nueva de **instalación de paneles solares** (servicio principal) y **soluciones eléctricas en general** (servicio secundario), en Buenos Aires, Argentina.
+Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **instalación de paneles solares** (servicio principal) y **soluciones eléctricas en general** (servicio secundario), en Buenos Aires, Argentina.
 
 ## Cómo trabajar acá
 - Idioma: **español rioplatense (voseo)**, simple y claro. El dueño está aprendiendo el rubro desde cero.
@@ -21,3 +21,5 @@ Este repositorio es el "cerebro" de una empresa nueva de **instalación de panel
 - Capital inicial: $1.000.000 ARS, de los cuales $200.000 son para publicidad (Meta Ads).
 - Capacidad estimada: 3 o 4 instalaciones por mes al principio.
 - Herramientas: Claude Pro + Claude Code, APIMart (API de modelos de IA de imagen, video y audio), conectores de Gmail, Google Calendar, Drive, Docs y Canva.
+- Sistema de gestión publicado: https://claude.ai/artifact/5EheuufRYVNZ6UfrEkMJwQ (fuente en `08-sistema/`). Su base de datos tiene `clientes/*` y `config/precios`.
+- APIMart no se conecta con Claude: se usa a mano. Claude entrega prompts listos para copiar.
