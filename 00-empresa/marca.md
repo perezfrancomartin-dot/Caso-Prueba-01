@@ -9,3 +9,7 @@
 ## Pendiente
 - [ ] Verificar @nortesolar en Instagram y Facebook, nortesolar.com.ar en NIC.ar y la marca en INPI (clase 37)
 - [ ] Exportar el logo en PNG (fondo transparente) para perfiles, y versión cuadrada para WhatsApp
+
+## Piezas creadas
+- **Placa final de anuncios (9:16):** https://canva.link/t0t4fnfp7kk92cn (diseño DAHYBGWFkHs)
+- **6 publicaciones de perfil (1080 × 1350):** `06-marketing/publicaciones/`. Hechas por Claude como imágenes (Canva se quedó sin créditos de IA el 14/10/2026). El símbolo es provisorio: si el logo de Canva es distinto, se reemplaza.
