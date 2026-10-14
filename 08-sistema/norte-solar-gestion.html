@@ -89,6 +89,11 @@ table.lines tr.tot td{font-weight:700;border-bottom:0;border-top:1px solid var(-
 .hist{display:grid;gap:8px}
 .hist div{border-left:2px solid var(--line);padding-left:10px;font-size:14px}
 .hist time{display:block;font-size:12px;color:var(--muted)}
+.ia{border-color:var(--accent)}
+.ia-prev{display:grid;gap:10px;background:var(--surface-2);border-radius:var(--r);padding:14px}
+.ia-prev dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:4px 12px;margin:0;font-size:14px}
+.ia-prev dt{color:var(--muted)} .ia-prev dd{margin:0;overflow-wrap:anywhere}
+.resumen{white-space:pre-wrap;font-size:14px;line-height:1.55}
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;z-index:20}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:22px;display:grid;gap:8px;justify-items:start}
 .banner{background:var(--surface-2);border-radius:var(--r);padding:12px 14px;margin-top:16px;font-size:14px}
@@ -153,7 +158,8 @@ const CAMPOS_PRECIOS = [
 
 /* ---------- Estado ---------- */
 const S = { db:null, canConfig:null, clientes:[], loaded:false, cfg:{...DEFAULTS}, cfgExists:false,
-  view:"seg", filtro:"abiertos", q:"", abierto:null, sub:"datos", dbMissing:false };
+  view:"seg", filtro:"abiertos", q:"", abierto:null, sub:"datos", dbMissing:false,
+  ia:{fn:null, img:false, accept:"image/*", max:2, fact:null, chat:null, busy:"", err:"", resumen:"", resBusy:false} };
 
 /* ---------- Utilidades ---------- */
 const $ = s => document.querySelector(s);
@@ -292,11 +298,16 @@ function vistaSeguimiento(){
   const filtros = [["abiertos","Abiertos"],...ESTADOS.map(e=>[e.k,e.t]),["todos","Todos"]]
     .map(([k,t])=>`<button data-filtro="${k}" aria-pressed="${S.filtro===k}">${esc(t)}</button>`).join("");
 
+  const resumen = S.ia.fn ? `<section class="block"><div class="panel">
+      <div class="row"><h3>Resumen del día</h3><span class="spacer"></span><button id="resumen" ${S.ia.resBusy||!S.clientes.length?"disabled":""}>${S.ia.resumen?"Actualizar resumen":"Pedir resumen a Claude"}</button></div>
+      ${S.ia.resumen?`<div class="resumen">${esc(S.ia.resumen)}</div>`:`<span class="note">Claude lee los clientes y te dice a quién contactar hoy, qué presupuestos faltan aprobar y cuáles están más cerca de cerrarse.</span>`}
+    </div></section>` : "";
   return `${banner}
   <div class="row" style="margin-top:20px">
     <h2>Seguimiento</h2><span class="spacer"></span>
     <button class="btn-primary" id="nuevo" ${S.db?"":"disabled"}>+ Nueva consulta</button>
   </div>
+  ${resumen}
   <div class="stats">
     <button class="stat ${paraHoy.length?"hot":""}" data-filtro-hoy><span class="lbl">Para contactar hoy</span><b>${paraHoy.length}</b></button>
     <button class="stat ${aprobar.length?"hot":""}" data-filtro="aprobar"><span class="lbl">Presupuestos para aprobar</span><b>${aprobar.length}</b></button>
@@ -342,8 +353,95 @@ function vistaCliente(){
   <div class="subtabs" role="tablist">${subs.map(([k,t])=>`<button role="tab" data-sub="${k}" aria-selected="${S.sub===k}">${t}</button>`).join("")}</div>
   <div style="margin-top:16px">${S.sub==="datos"?subDatos(c):S.sub==="relevamiento"?subRelev(c):S.sub==="presupuesto"?subPresu(c):subHist(c)}</div>`;
 }
+function panelIA(){
+  if(!S.ia.fn) return "";
+  const f=S.ia.fact, ch=S.ia.chat;
+  const fila2 = (k,v) => v===null||v===undefined||v==="" ? "" : `<dt>${k}</dt><dd>${esc(v)}</dd>`;
+  return `<div class="panel ia" style="margin-bottom:14px">
+    <h3>Cargar con IA</h3>
+    <p class="note" style="margin:0">Subí la foto de la factura o pegá la conversación de WhatsApp. Claude completa los datos y vos los revisás antes de guardar.</p>
+    <div class="grid2">
+      <label class="field"><span>Foto de la factura (podés subir frente y dorso)</span>${S.ia.img?`<input type="file" id="ia-foto" accept="${esc(S.ia.accept)}" multiple ${S.ia.busy?"disabled":""}>`:`<span class="note">Desde este dispositivo no se pueden enviar imágenes a Claude.</span>`}</label>
+      <div class="field"><span>Conversación de WhatsApp</span><textarea id="ia-chat" placeholder="Pegá acá los mensajes del cliente"></textarea><div class="row"><button type="button" id="ia-leer-chat" ${S.ia.busy?"disabled":""}>Leer conversación</button></div></div>
+    </div>
+    ${S.ia.busy?`<div class="callout">${esc(S.ia.busy)}</div>`:""}
+    ${S.ia.err?`<div class="callout" style="color:var(--bad)">${esc(S.ia.err)}</div>`:""}
+    ${f?`<div class="ia-prev"><h3>Datos leídos de la factura</h3><dl>
+      ${fila2("Titular",f.titular)}${fila2("Dirección",[f.direccion,f.localidad].filter(Boolean).join(", "))}${fila2("Distribuidora",f.distribuidora)}${fila2("Tarifa",f.tarifa)}
+      ${fila2("Conexión",f.conexion)}${fila2("N° de suministro",f.numeroSuministro)}${fila2("Período",f.periodo)}
+      ${fila2("Consumo del período",f.consumoPeriodoKwh!=null?nf(f.consumoPeriodoKwh)+" kWh"+(f.diasPeriodo?` en ${f.diasPeriodo} días`:""):"")}
+      ${fila2("Promedio mensual del historial",f.promHist?nf(f.promHist)+" kWh":"")}
+      ${fila2("Consumo mensual a usar",f.consumoMensual?nf(f.consumoMensual)+" kWh":"")}
+      ${fila2("Total a pagar",f.totalAPagar!=null?money(f.totalAPagar):"")}${fila2("Precio estimado del kWh",f.precioKwhEstimado?money(f.precioKwhEstimado):"")}
+      ${fila2("Subsidio",f.subsidio)}${fila2("Observaciones",f.observaciones)}</dl>
+      <div class="row"><button class="btn-primary" id="ia-guardar-fact">Guardar en la ficha</button><button id="ia-descartar">Descartar</button></div></div>`:""}
+    ${ch?`<div class="ia-prev"><h3>Datos leídos de la conversación</h3><dl>
+      ${fila2("Nombre",ch.nombre)}${fila2("Barrio",ch.barrio)}${fila2("Qué busca",{ahorro:"Ahorrar en la factura",cortes:"Luz en los cortes",ambos:"Las dos cosas"}[ch.objetivo]||"")}
+      ${fila2("Qué tiene que andar en un corte",ch.cargasCorte)}${fila2("Para cuándo",ch.plazo)}${fila2("Techo",ch.techo)}${fila2("Presupuesto mencionado",ch.presupuestoMencionado)}${fila2("Resumen",ch.resumen)}</dl>
+      <div class="row"><button class="btn-primary" id="ia-guardar-chat">Guardar en la ficha</button><button id="ia-descartar">Descartar</button></div></div>`:""}
+  </div>`;
+}
+function errIA(e){
+  return ({not_granted:"No se dio permiso para usar Claude en esta página.", rate_limited:"Se alcanzó el límite de uso de Claude. Probá más tarde.",
+    image_rejected:"No se pudo leer la imagen. Probá con otra foto, más nítida y en JPG o PNG.", images_unavailable:"Desde este dispositivo no se pueden enviar imágenes.",
+    invalid_json:"Claude no pudo leerlo bien. Probá de nuevo o con una foto más nítida.", session_expired:"Tenés que volver a iniciar sesión en claude.ai.",
+    refused:"Claude no pudo procesar ese contenido."})[e?.code] || "No se pudo completar. Probá de nuevo.";
+}
+const numN = v => { if(v===null||v===undefined||v==="") return null; if(typeof v==="number") return isFinite(v)?v:null; const n=Number(String(v).replace(/[^\d.,-]/g,"").replace(/\.(?=\d{3}(\D|$))/g,"").replace(",",".")); return isFinite(n)?n:null; };
+async function leerFactura(files){
+  const arr=[...files].slice(0,S.ia.max||2); if(!arr.length) return;
+  S.ia.busy="Leyendo la factura… puede tardar hasta un minuto."; S.ia.err=""; S.ia.fact=null; S.ia.chat=null; render();
+  const prompt = `Estas imágenes son una factura de luz de Argentina (Edenor, Edesur, cooperativa u otra distribuidora). Extraé los datos y respondé SOLO con un objeto JSON con estas claves (null si un dato no aparece; números sin separador de miles y con punto decimal):
+{"titular": string|null, "direccion": string|null, "localidad": string|null, "distribuidora": string|null, "tarifa": string|null, "conexion": "Monofásica"|"Trifásica"|null, "numeroSuministro": string|null, "periodo": string|null, "diasPeriodo": number|null, "consumoPeriodoKwh": number|null, "historicoKwh": [{"periodo": string, "kwh": number}], "totalAPagar": number|null, "cargoFijo": number|null, "precioKwhEstimado": number|null, "subsidio": "Sí"|"No"|null, "observaciones": string|null}
+precioKwhEstimado: precio aproximado por kWh con impuestos incluidos y sin el cargo fijo, o sea (totalAPagar − cargo fijo con sus impuestos) ÷ consumoPeriodoKwh. Si no se puede calcular, null.
+historicoKwh: los consumos de períodos anteriores si la factura trae el gráfico o la tabla de historial; si no, [].
+observaciones: algo importante para dimensionar paneles solares (por ejemplo, si la factura es bimestral). No inventes datos.`;
+  try{
+    const d = await S.ia.fn.json(prompt,{images:arr});
+    const kwh=numN(d?.consumoPeriodoKwh), dias=numN(d?.diasPeriodo);
+    const hist=(Array.isArray(d?.historicoKwh)?d.historicoKwh:[]).map(h=>numN(h?.kwh)).filter(v=>v>0);
+    const mensual = kwh ? (dias&&dias>0 ? Math.round(kwh/dias*30) : Math.round(kwh)) : null;
+    const promHistBruto = hist.length>=3 ? hist.reduce((a,b)=>a+b,0)/hist.length : null;
+    const promHist = promHistBruto && dias && dias>45 ? Math.round(promHistBruto/2) : (promHistBruto?Math.round(promHistBruto):null);
+    S.ia.fact = {...d, consumoPeriodoKwh:kwh, diasPeriodo:dias, totalAPagar:numN(d?.totalAPagar), precioKwhEstimado:numN(d?.precioKwhEstimado), promHist, consumoMensual: promHist||mensual};
+  }catch(e){ S.ia.err=errIA(e); }
+  S.ia.busy=""; render();
+}
+async function leerChat(texto){
+  if(!texto.trim()){ S.ia.err="Pegá primero la conversación."; render(); return; }
+  S.ia.busy="Leyendo la conversación…"; S.ia.err=""; S.ia.chat=null; S.ia.fact=null; render();
+  const prompt = `Esta es una conversación de WhatsApp entre Norte Solar (empresa de paneles solares) y un posible cliente. Extraé los datos del cliente y respondé SOLO con un objeto JSON:
+{"nombre": string|null, "barrio": string|null, "objetivo": "ahorro"|"cortes"|"ambos"|null, "cargasCorte": string|null, "plazo": string|null, "techo": "Chapa"|"Teja"|"Losa"|"Otro"|null, "presupuestoMencionado": string|null, "resumen": string}
+"objetivo": ahorro = quiere bajar la factura; cortes = quiere luz cuando se corta; ambos = las dos cosas. "resumen": una o dos frases con lo importante para el vendedor. No inventes datos que no estén en la conversación.
+
+Conversación:
+"""
+${texto.slice(0,20000)}
+"""`;
+  try{ S.ia.chat = await S.ia.fn.json(prompt,{modelTier:"quick"}); }catch(e){ S.ia.err=errIA(e); }
+  S.ia.busy=""; render();
+}
+async function pedirResumen(){
+  S.ia.resBusy=true; S.ia.resumen="Pensando…"; render();
+  const t=hoy();
+  const datos = S.clientes.filter(c=>!CERRADOS.includes(c.estado) || (c.cerradoEl||"").startsWith(t.slice(0,7))).map(c=>({
+    nombre:c.nombre, etapa:EST[c.estado]?.t, proximoContacto:c.proximoContacto, barrio:c.zona, busca:c.objetivo,
+    presupuesto:c.presupuesto?.estado||null, ultimasNotas:(c.historial||[]).slice(-2).map(h=>h.fecha+": "+h.texto)}));
+  const prompt = `Sos el asistente comercial de Norte Solar, una empresa de paneles solares de Zona Norte (Buenos Aires). Hoy es ${t}. Estos son los clientes (JSON):
+${JSON.stringify(datos).slice(0,60000)}
+
+Armá el resumen del día para el equipo, en español rioplatense, claro y corto (máximo 180 palabras), con guiones y sin formato markdown de títulos:
+1. A quién hay que contactar hoy o está atrasado, y qué decirle en una frase.
+2. Presupuestos que faltan aprobar o enviar.
+3. Las 2 o 3 oportunidades más cerca de cerrarse.
+4. Números rápidos: consultas abiertas y obras ganadas este mes.
+Usá solo los datos del JSON.`;
+  try{ await S.ia.fn(prompt,{cache:false, onText:({text})=>{ S.ia.resumen=text; const el=document.querySelector(".resumen"); if(el) el.textContent=text; }}); }
+  catch(e){ S.ia.resumen = e?.text || errIA(e); }
+  S.ia.resBusy=false; render();
+}
 function subDatos(c){
-  return `<form class="panel" id="form-datos">
+  return `${panelIA()}<form class="panel" id="form-datos">
     <div class="grid2">
       <label class="field"><span>Nombre</span><input id="d-nombre" value="${esc(c.nombre)}"></label>
       <label class="field"><span>WhatsApp</span><input id="d-telefono" inputmode="tel" value="${esc(c.telefono)}" placeholder="11 2345 6789"></label>
@@ -479,8 +577,9 @@ document.addEventListener("click", async ev=>{
   if(t.id==="tab-precios"){ S.view="precios"; render(); return; }
   if(t.dataset.filtro){ S.filtro=t.dataset.filtro; S.abierto=null; render(); return; }
   if(t.hasAttribute("data-filtro-hoy")){ S.filtro="abiertos"; render(); return; }
-  if(t.dataset.abrir){ S.abierto=t.dataset.abrir; S.sub="datos"; render(); window.scrollTo(0,0); return; }
-  if(t.id==="volver"){ S.abierto=null; render(); return; }
+  if(t.dataset.abrir){ S.abierto=t.dataset.abrir; S.sub="datos"; S.ia.fact=null; S.ia.chat=null; S.ia.err=""; render(); window.scrollTo(0,0); return; }
+  if(t.id==="volver"){ S.abierto=null; S.ia.fact=null; S.ia.chat=null; S.ia.err=""; render(); return; }
+  if(t.id==="resumen" && S.ia.fn){ pedirResumen(); return; }
   if(t.dataset.sub){ S.sub=t.dataset.sub; render(); return; }
   if(t.id==="nuevo" && S.db){
     try{ const ref = await S.db.collection("clientes").add({nombre:"Nueva consulta", estado:"nuevo", proximoContacto:hoy(), creado:ahoraISO(), actualizado:ahoraISO(), historial:[{fecha:new Date().toLocaleString("es-AR",{dateStyle:"short",timeStyle:"short"}),texto:"Consulta creada"}]});
@@ -491,6 +590,32 @@ document.addEventListener("click", async ev=>{
   const c = S.clientes.find(x=>x.id===S.abierto);
   if(!c) return;
   if(t.dataset.contacto){ const d=Number(t.dataset.contacto); await actualizar(c,{proximoContacto:masDias(d), historial:nota(c,`Contactado. Próximo contacto en ${d} día(s).`)},"Contacto registrado"); return; }
+  if(t.id==="ia-leer-chat"){ leerChat(val("ia-chat")); return; }
+  if(t.id==="ia-descartar"){ S.ia.fact=null; S.ia.chat=null; render(); return; }
+  if(t.id==="ia-guardar-fact" && S.ia.fact){
+    const f=S.ia.fact; const rel={};
+    if(f.consumoMensual) rel.consumoMensual=f.consumoMensual;
+    if(f.precioKwhEstimado) rel.precioKwh=Math.round(f.precioKwhEstimado);
+    if(f.conexion) rel.fase=f.conexion;
+    const cambios={relevamiento:rel, factura:{distribuidora:f.distribuidora||"", tarifa:f.tarifa||"", periodo:f.periodo||"", numeroSuministro:f.numeroSuministro||"", totalAPagar:f.totalAPagar||null, subsidio:f.subsidio||"", leidaEl:hoy()},
+      historial:nota(c,`Factura leída con IA: ${f.consumoMensual?nf(f.consumoMensual)+" kWh/mes":"sin consumo"}${f.distribuidora?", "+f.distribuidora:""}`)};
+    if((!c.nombre||c.nombre==="Nueva consulta") && f.titular) cambios.nombre=f.titular;
+    if(!c.zona && (f.localidad||f.direccion)) cambios.zona=f.localidad||f.direccion;
+    if(c.estado==="nuevo") cambios.estado="factura";
+    S.ia.fact=null; await actualizar(c,cambios,"Datos de la factura guardados"); return;
+  }
+  if(t.id==="ia-guardar-chat" && S.ia.chat){
+    const ch=S.ia.chat; const cambios={};
+    if(ch.nombre && (!c.nombre||c.nombre==="Nueva consulta")) cambios.nombre=ch.nombre;
+    if(ch.barrio && !c.zona) cambios.zona=ch.barrio;
+    if(["ahorro","cortes","ambos"].includes(ch.objetivo)) cambios.objetivo=ch.objetivo;
+    if(ch.plazo) cambios.plazo=ch.plazo;
+    const rel={}; if(ch.cargasCorte) rel.cargasTexto=ch.cargasCorte; if(ch.techo) rel.techo=ch.techo;
+    if(Object.keys(rel).length) cambios.relevamiento=rel;
+    if(ch.resumen) cambios.notas=[c.notas, ch.resumen].filter(Boolean).join("\n");
+    cambios.historial=nota(c,"Conversación de WhatsApp leída con IA");
+    S.ia.chat=null; await actualizar(c,cambios,"Datos de la conversación guardados"); return;
+  }
   if(t.id==="copiar-seg"){ copiar(SEGUIMIENTO[c.estado], $("#msg-seg")); return; }
   if(t.id==="copiar-presu"){ copiar($("#msg-presu").textContent, $("#msg-presu")); return; }
   if(t.id==="borrar"){ $("#confirm-borrar").hidden=false; return; }
@@ -508,6 +633,7 @@ document.addEventListener("click", async ev=>{
   }
 });
 document.addEventListener("change", async ev=>{
+  if(ev.target.id==="ia-foto"){ leerFactura(ev.target.files); return; }
   const c = S.clientes.find(x=>x.id===S.abierto); if(!c) return;
   if(ev.target.id==="f-estado"){ const e=ev.target.value; const cambios={estado:e, historial:nota(c,`Etapa: ${EST[e].t}`)}; if(e==="ganado") cambios.cerradoEl=hoy(); await actualizar(c,cambios); }
   if(ev.target.id==="f-prox"){ await actualizar(c,{proximoContacto:ev.target.value}); }
@@ -537,6 +663,14 @@ document.addEventListener("submit", async ev=>{
 /* ---------- Arranque ---------- */
 render();
 (async()=>{
+  const sample = await window.claude?.use?.("sample");
+  if(!sample) return;
+  S.ia.fn = sample;
+  const lim = await sample.limits().catch(()=>null);
+  S.ia.img = !!lim?.images; S.ia.accept = lim?.images?.mediaTypes?.join(",") || "image/*"; S.ia.max = lim?.images?.maxCount || 2;
+  render();
+})();
+(async()=>{
   const db = await window.claude?.use?.("db");
   if(!db){ S.dbMissing=true; render(); return; }
   S.db = db;
@@ -544,8 +678,8 @@ render();
   db.collection("clientes").onSnapshot(snap=>{
     S.clientes = snap.docs.filter(d=>d.exists).map(d=>({id:d.id, ...d.data()}));
     S.loaded = true;
-    const foco=document.activeElement; const enForm = foco && foco.closest && foco.closest("form") && ["INPUT","TEXTAREA","SELECT"].includes(foco.tagName);
-    if(!enForm) render();
+    const foco=document.activeElement; const escribiendo = foco && ["INPUT","TEXTAREA","SELECT"].includes(foco.tagName) && foco.id!=="buscar";
+    if(!escribiendo) render();
   }, ()=>{ S.loaded=true; render(); });
   db.doc("config/precios").onSnapshot(s=>{
     if(s.exists){ S.cfg={...DEFAULTS, ...s.data()}; S.cfgExists=true; } else { S.cfg={...DEFAULTS}; S.cfgExists=false; }

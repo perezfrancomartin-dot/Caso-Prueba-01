@@ -15,3 +15,5 @@
 | 14/10/2026 | Comisiones aprobadas: Gustavo 50 % de la mano de obra (+5 % por referido), ayudante 20 %, Olivia 3 % del total. |
 | 14/10/2026 | APIMart se usa a mano desde su web (no se puede conectar). Claude prepara guiones y prompts listos para copiar. |
 | 14/10/2026 | Sistema de gestión (seguimiento + presupuesto automático con aprobación) en `08-sistema/`. |
+| 14/10/2026 | Sistema: se agrega lectura de factura y de conversación con IA, y resumen del día. Olivia carga los datos directamente en la página. |
+| 14/10/2026 | n8n + Telegram: se posterga. Se evalúa cuando haya volumen (ver `08-sistema/automatizacion-futura.md`). |
