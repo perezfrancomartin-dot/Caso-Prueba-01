@@ -29,7 +29,8 @@ Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 - [ ] Primera obra (cliente actual) bien documentada con fotos y video para contenido real
 
 ## Etapa 4: Publicidad (desde la semana 4)
-- [ ] Producir 6 a 9 anuncios con IA (ver `06-marketing/`)
+- [x] Guiones, prompts y estructura de los 6 anuncios (`06-marketing/anuncios-prueba-1.md`)
+- [ ] Producir los 6 videos en APIMart y editarlos en CapCut
 - [ ] Campaña de prueba en Meta Ads: $200.000 en 3 o 4 semanas
 - [ ] Medir: costo por consulta, visitas agendadas, obras cerradas
 - [ ] Quedarse con los 2 o 3 anuncios que mejor funcionan y reinvertir ganancias

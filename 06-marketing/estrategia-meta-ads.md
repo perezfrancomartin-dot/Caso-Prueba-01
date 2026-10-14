@@ -14,12 +14,12 @@ Que entren consultas **calificadas** por WhatsApp, que Olivia las convierta en v
 
 | Elemento | Configuración |
 |---|---|
-| Objetivo | **Clientes potenciales**, con destino **WhatsApp** (anuncio de clic a WhatsApp) |
+| Objetivo | **Interacción → Mensajes → WhatsApp**, optimizado para maximizar conversaciones (detalle en `anuncios-prueba-1.md`) |
 | Presupuesto | ~$7.000 por día durante 4 semanas |
 | Ubicación | Vicente López, San Isidro, San Fernando, Tigre (incluye Nordelta), Escobar, Pilar. La Plata en una prueba aparte más adelante. |
 | Edad | 30 a 65 años |
 | Público | Advantage+ (Meta elige), sin intereses al principio |
-| Anuncios | 3 ángulos × 2 versiones = 6 anuncios (ver `ganchos-y-guiones.md`) |
+| Anuncios | 3 ángulos × 2 ganchos = 6 anuncios (ver `anuncios-prueba-1.md`) |
 | Formato | Video vertical 9:16, 15 a 30 segundos, con subtítulos |
 
 **Por qué WhatsApp y no formulario:** el formulario trae más contactos pero de peor calidad. WhatsApp trae menos, pero la persona ya está conversando. Para una obra de millones de pesos, importa más la calidad. Además, el formulario exige política de privacidad y configuraciones técnicas extra.
