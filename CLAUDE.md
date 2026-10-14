@@ -4,7 +4,7 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 
 ## Cómo trabajar acá
 - Idioma: **español rioplatense (voseo)**, simple y claro. El dueño está aprendiendo el rubro desde cero.
-- Antes de proponer algo, leé `00-empresa/decisiones.md` (lo ya decidido) y `00-empresa/hoja-de-ruta.md` (en qué etapa estamos).
+- Al empezar una sesión, leé `00-empresa/bitacora.md` (dónde quedamos). Antes de proponer algo, leé `00-empresa/decisiones.md` (lo ya decidido) y `00-empresa/hoja-de-ruta.md` (en qué etapa estamos).
 - Cada decisión nueva se registra en `00-empresa/decisiones.md` con fecha.
 - Precios: siempre con fecha y fuente. En Argentina cambian rápido.
 - Nunca inventar obras, clientes ni testimonios para publicidad (decisión del equipo).
@@ -23,3 +23,4 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 - Herramientas: Claude Pro + Claude Code, APIMart (API de modelos de IA de imagen, video y audio), conectores de Gmail, Google Calendar, Drive, Docs y Canva.
 - Sistema de gestión publicado: https://claude.ai/artifact/5EheuufRYVNZ6UfrEkMJwQ (fuente en `08-sistema/`). Su base de datos tiene `clientes/*` y `config/precios`.
 - APIMart no se conecta con Claude: se usa a mano. Claude entrega prompts listos para copiar.
+- Al terminar algo importante, actualizá `00-empresa/bitacora.md`.
