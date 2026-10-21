@@ -2,6 +2,10 @@
 
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
+## 21/10/2026
+- **Guido Goñi no respondió** el pedido de datos. Pasó a Perdido en el sistema. Último mensaje liviano a fines de noviembre (antes del verano).
+- Aprendizaje: en las próximas visitas, pedir la foto de la factura **en el momento** y dejar fecha de presupuesto acordada.
+
 ## 14/10/2026
 - **Marca:** Norte Solar. Logo en Canva, placa final de anuncios en Canva, 6 publicaciones + foto de perfil + portada de Facebook en `06-marketing/publicaciones/`.
 - **Sistema de gestión** publicado (seguimiento, presupuesto automático, lectura de factura y conversación con IA, resumen del día). Ver `08-sistema/`.
@@ -12,6 +16,6 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 
 ## Próximos pasos
 1. Crear las cuentas y subir las publicaciones.
-2. Mandar el mensaje a Guido y armar su presupuesto cuando llegue la factura.
+2. Conseguir los primeros clientes por redes y anuncios (Guido no respondió).
 3. Cotizar los precios estimados del sistema.
 4. Producir los 6 videos en APIMart y lanzar la prueba de Meta Ads.

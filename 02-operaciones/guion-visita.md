@@ -14,6 +14,11 @@
 9. Muchas fotos de todo.
 10. Cuánto pensaba invertir, cómo pagaría y para cuándo.
 
+## Antes de irte, sí o sí
+- **Sacale foto a la factura en el momento** (o pedile que la busque en la app de Edenor/Edesur mientras estás ahí). No te vayas con "después te la mando".
+- Fotos del tablero, el medidor y el techo: sacalas vos.
+- **Acordá el día** en que le mandás el presupuesto, y que te diga si ese día puede charlarlo.
+
 ## Qué decir al final
 "Ya tengo todo lo que necesito. Con esto calculo el sistema según tu consumo y lo que querés respaldar. El [día] te mando el presupuesto con dos o tres opciones: una más básica, una intermedia que es la que te voy a recomendar, y una más completa. Si querés, después lo vemos juntos y te explico cada cosa."
 
