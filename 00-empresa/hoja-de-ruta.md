@@ -42,5 +42,5 @@ Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 - [ ] Blanquear a Olivia como empleada cuando el volumen lo permita
 - [ ] Apuntar a comercios y pymes
 
-## Proyecto especial (en evaluación)
-- [ ] Stand solar de fin de año en Mar del Sur (31/12). Decisión go/no-go: 15/11. Ver `09-eventos/fin-de-ano-mar-del-sur.md`. **No debe retrasar las etapas 1 a 4.**
+## Proyecto especial (postergado)
+- [ ] Stand solar en Mar del Sur: postergado para el verano 2027/2028. Condiciones para retomarlo en `09-eventos/fin-de-ano-mar-del-sur.md`.

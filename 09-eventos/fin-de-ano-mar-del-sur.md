@@ -1,6 +1,6 @@
 # Proyecto fin de año: stand solar en Mar del Sur (31/12/2026)
 
-Estado: **en evaluación** (21/10/2026). Fecha de decisión: **15/11/2026**.
+Estado: **POSTERGADO para el verano 2027/2028** (decisión del dueño, 21/10/2026). Antes estaba en evaluación con decisión el 15/11/2026.
 Idea del dueño: llevar un gazebo con paneles y batería funcionando a la plaza principal de Mar del Sur (oficialmente "Mar del Sud") para el festejo de año nuevo. Cargar con el sol todo el 31 y usar esa energía a la noche. De día, folletos en el gazebo y en la playa. De noche, un stand con 2 personas haciendo tragos y licuados (chupetines para los chicos) y un auto eléctrico prestado (BYD Shark). Luces verde neón. Objetivo: promocionar los paneles y mostrar que funcionan de noche.
 
 ## Veredicto crudo
@@ -143,3 +143,18 @@ Metas a definir con vos:
 **Verificado en la búsqueda:** Mar del Sud está a 17 km de Miramar y solo tiene una calle pavimentada (la Av. 100); la economía es turística ([Aire de Santa Fe](https://www.airedesantafe.com.ar/turismo/cual-es-la-nueva-alternativa-la-costa-atlantica-n267032)). En 2017 el festejo de Miramar tuvo show de mapping, y en el partido existe una ordenanza "Pirotecnia Cero" ([La Capital](https://www.lacapitalmdp.com/miramar-recibira-el-ano-con-un-novedoso-show-de-mapping-en-la-costanera/)). Leyes 11.748 y 11.825 (arriba). Datos de la BYD Shark (arriba).
 
 **No pude verificar:** que el festejo de la plaza de Mar del Sud siga siendo como lo viste ni quién lo organiza; las ordenanzas de General Alvarado sobre stands, alcohol y folletería; si la Shark tiene salida de energía para equipos; el boom de Rocas Negras; el costo de una estación portátil.
+
+## Postergado: cuándo retomarlo
+Decisión del dueño (21/10/2026): se deja para el próximo año, con más obras hechas y más recursos.
+
+**Retomar cuando se cumpla todo esto** (a revisar en octubre de 2027):
+- Matrícula del dueño en mano y seguros (accidentes personales y responsabilidad civil) al día
+- Al menos **5 obras terminadas** y **3 reseñas reales en Google**
+- Un proceso de obra que funcione sin que el dueño tenga que estar (checklist, fotos, acta)
+- Un acuerdo vigente con los instaladores y que no dependa de una sola persona
+- Costo propio del proyecto menor a lo que el dueño puede perder sin afectar el capital de trabajo
+
+**Mientras tanto, sin costo:**
+- Hablar con el tío de la pareja y guardar los contactos (quién organiza el festejo, a quién se piden permisos, comercios amigos). Preguntarle si en verano se corta la luz en el pueblo.
+- Si el 31/12/2026 el dueño está en Mar del Sur, **sacar fotos y notas**: qué se instala en la plaza, dónde, cuánta gente, qué consumo hay, quién manda. Sirve para armar bien la propuesta del año que viene.
+- Si el tío conoce a una constructora o inmobiliaria local, una charla informal sin compromiso.

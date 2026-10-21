@@ -26,3 +26,4 @@
 | 21/10/2026 | Pablito trabaja por su cuenta y sigue así: sus clientes y obras propios quedan fuera del acuerdo. Cliente de Norte Solar = a quien se le mandó un presupuesto. |
 | 21/10/2026 | No se sale a obra sin un matriculado que firme. El dueño tramita su matrícula. Se desconoce si Pablito está matriculado. |
 | 21/10/2026 | Proyecto de fin de año en Mar del Sur: se evalúa la versión B (sin alcohol, equipo prestado, pantalla en vivo). Decisión el 15/11 según permiso del municipio y equipo prestado. El mensaje correcto es "esta luz la guardó el sol de hoy", no "los paneles rinden de noche". |
+| 21/10/2026 | **El proyecto de fin de año en Mar del Sur se posterga** para el verano 2027/2028. Se retoma con matrícula, seguros, al menos 5 obras y 3 reseñas reales. |
