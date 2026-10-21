@@ -6,7 +6,8 @@ Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 - [x] Elegir el nombre de la marca: Norte Solar
 - [ ] Verificar que el nombre esté libre: Instagram, Facebook, dominio .com.ar en NIC.ar, marca en INPI
 - [x] Validar las comisiones de Gustavo y Olivia
-- [ ] Firmar el acuerdo simple de comisiones
+- [x] Propuesta para instaladores armada (`01-legal-admin/propuesta-instaladores/`)
+- [ ] Reunión con Gustavo y Pablito, definir tarifa por tipo de obra y firmar acuerdo simple (revisado por contador o abogado)
 - [ ] Alta de monotributo: dueño, Gustavo y Olivia (ver `01-legal-admin/checklist-alta.md`)
 - [ ] Iniciar el trámite de matrícula del dueño en el Colegio de Técnicos
 - [ ] Seguro de accidentes personales y de responsabilidad civil

@@ -11,9 +11,11 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 - Commits en español, descriptivos.
 
 ## Equipo
-- **Dueño** (técnico electromecánico): dirección, estrategia, publicidad, presupuestos, compras. Hace las primeras obras para aprender y después se retira de la obra. Va a tramitar la matrícula.
-- **Gustavo** (jefe técnico y de obra): electricista con experiencia en fotovoltaica y contactos para sumar gente. Cobra comisión por instalación. Disponible en la semana. No matriculado.
-- **Olivia** (atención al cliente, redes y administración): no técnica, ~4 h por día. Cobra comisión por venta cerrada.
+- **Dueño** (técnico electromecánico): no instala. Busca trabajos, maneja redes, presupuestos y compras. Solo disponible los sábados (puede ir a obra como ayudante). Tramita la matrícula.
+- **Pablito** (amigo de Gustavo): instalador líder de cuadrilla. Tiene experiencia instalando paneles. Monotributista. Disponibilidad a coordinar.
+- **Gustavo**: electricista de buen nivel, sin experiencia en paneles. Ayudante en formación con camino a instalador. Monotributista. Disponible en la semana.
+- **Olivia** (atención al cliente, redes y administración): no técnica, ~4 h por día. Cobra comisión por venta cerrada (3 %).
+- Propuesta de acuerdo con los instaladores: `01-legal-admin/propuesta-instaladores/` (análisis interno: `01-legal-admin/propuesta-analisis-interno.md`).
 
 ## Datos clave
 - Zona: Zona Norte del GBA, countries y barrios cerrados (Nordelta y similares), hasta La Plata. Viajes (por ejemplo, Costa Atlántica) se presupuestan aparte.

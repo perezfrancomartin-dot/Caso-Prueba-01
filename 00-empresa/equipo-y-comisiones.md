@@ -1,4 +1,7 @@
-# Equipo y comisiones (propuesta para validar)
+# Equipo y comisiones
+
+> **Actualizado el 21/10/2026:** el equipo de instalación ahora es Pablito (líder) + Gustavo (ayudante en formación). Vale lo de `01-legal-admin/propuesta-instaladores/`. Lo de abajo describe el esquema anterior: el reparto 50/20/30 se mantiene, pero el rol de "líder" lo cumple Pablito, y el referido baja a 3 %.
+
 
 ## Roles
 
