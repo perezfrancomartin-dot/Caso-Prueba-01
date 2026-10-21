@@ -1,6 +1,6 @@
 # Equipo y comisiones
 
-> **Actualizado el 21/10/2026:** el equipo de instalación ahora es Pablito (líder) + Gustavo (ayudante en formación). Vale lo de `01-legal-admin/propuesta-instaladores/`. Lo de abajo describe el esquema anterior: el reparto 50/20/30 se mantiene, pero el rol de "líder" lo cumple Pablito, y el referido baja a 3 %.
+> **Actualizado el 21/10/2026:** el equipo de instalación ahora es Pablito (instalador a cargo) + Gustavo (ayudante en formación). Reparto vigente: **70 % para el instalador a cargo y 30 % para la empresa**; el instalador a cargo les paga a sus ayudantes lo que acuerde con ellos. El referido baja a 3 %. Ver `01-legal-admin/propuesta-instaladores/`. Lo de abajo describe el esquema anterior.
 
 
 ## Roles
