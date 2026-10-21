@@ -3,7 +3,7 @@
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
 ## 21/10/2026
-- **Propuesta para instaladores** (Gustavo y Pablito): PDF de 3 páginas listo para conversar en `01-legal-admin/propuesta-instaladores/`, más análisis interno. Cambia el rol de Gustavo (ahora ayudante en formación) y suma a Pablito como líder. Pendiente: reunión con ambos, definir tarifa por tipo de obra, saber si Pablito está matriculado, revisión de contador o abogado.
+- **Propuesta para instaladores** (Gustavo y Pablito): PDF de 3 páginas listo para conversar en `01-legal-admin/propuesta-instaladores/`, más análisis interno. Modelo 70 / 30: 70 % de la mano de obra para el instalador a cargo (Pablito al principio), que le paga a sus ayudantes lo que acuerde; 30 % para la empresa. Gustavo empieza de ayudante. Pendiente: actualizar el sistema al modelo 70/30, reunión con ambos, definir tarifa por tipo de obra, saber si Pablito está matriculado, revisión de contador o abogado.
 - **Guido Goñi no respondió** el pedido de datos. Pasó a Perdido en el sistema. Último mensaje liviano a fines de noviembre (antes del verano).
 - Aprendizaje: en las próximas visitas, pedir la foto de la factura **en el momento** y dejar fecha de presupuesto acordada.
 

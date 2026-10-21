@@ -5,12 +5,12 @@ Complementa `propuesta-instaladores/propuesta-instaladores-norte-solar.pdf` (lo 
 ## Qué cambió respecto de lo anterior
 | Antes (14/10) | Ahora (21/10) |
 |---|---|
-| Gustavo = jefe técnico, 50 % de la mano de obra | **Pablito = instalador líder (50 %)**. Gustavo = ayudante en formación (20 %) con camino a instalador (35/35 o 50/20) |
+| Gustavo = jefe técnico, 50 % de la mano de obra | **Modelo 70 / 30:** 70 % de la mano de obra para el instalador a cargo (al principio siempre Pablito), 30 % para la empresa. **El instalador a cargo le paga al ayudante lo que acuerde con él.** Gustavo empieza de ayudante y con el tiempo queda a cargo de obras simples |
 | Dueño hacía las primeras obras para aprender | El dueño **no instala**: consigue trabajos, redes, compras. Va a obra solo los sábados como ayudante |
 | Referido: 5 % | **Referido: 3 %** (igual que la comisión de Olivia). 5 % se comía demasiado margen |
 | Sin visita técnica paga | **Visita técnica en semana: 2 %** si la obra se concreta |
 
-El reparto 50 / 20 / 30 (líder / ayudante / empresa) se mantiene. Por eso los valores cargados en el sistema (`config/precios`: comGustavo 50, comAyudante 20) siguen sirviendo. Solo hay que cambiar las etiquetas "Gustavo" por "Instalador líder" en la página.
+**Decisión del dueño (21/10):** 70 % instalador a cargo / 30 % empresa, y la empresa no interviene en lo que se le paga al ayudante. Para la empresa no cambia nada: sigue quedándose con el 30 %. Falta actualizar el sistema: hoy la página reparte 50 % ("Gustavo"), 20 % (ayudante) y el resto a la empresa. Hay que dejar solo "Instalador a cargo 70 %" y "Norte Solar 30 %".
 
 ## Economía de una obra tipo (4 paneles, sin batería; números de ejemplo)
 | Concepto | Monto |
@@ -19,7 +19,7 @@ El reparto 50 / 20 / 30 (líder / ayudante / empresa) se mantiene. Por eso los v
 | Materiales | −$2.560.000 |
 | Mano de obra (pool) | $770.000 |
 | Margen sobre materiales (10 %) | $256.000 |
-| Pablito (50 %) / ayudante (20 %) | −$385.000 / −$154.000 |
+| Instalador a cargo (70 %) | −$539.000 |
 | Queda en la empresa antes de gastos | **$487.000** |
 | Olivia 3 % | −$107.580 |
 | Bono de calidad (5 % de la parte de la cuadrilla) | −$26.950 |
@@ -45,3 +45,18 @@ Con 3 a 4 obras por mes: unos $570.000 a $760.000 antes de impuestos y de lo que
 - Cantidad de obras para pasar a Fase 2 (propuesto: 5) y tamaño de la "obra simple" que puede liderar Gustavo (propuesto: hasta 6 paneles, sin batería)
 - Meses de garantía (propuesto: 12) y meses de no captación (propuesto: 6)
 - **Tarifa por tipo de obra** (se define en la primera reunión)
+
+## Modelo 70 / 30: qué mejora y qué cuidar
+**A favor**
+- Es **simple**: la empresa le paga a una sola persona por obra (una factura) y no administra pagos a ayudantes.
+- **Escala**: cada instalador a cargo arma y maneja su equipo. Es lo que se necesita para tener varias cuadrillas.
+- **El que dirige, decide** cuánto vale cada aporte, y tiene incentivo a trabajar rápido y bien (lo que no paga a un ayudante se lo queda).
+- Los costos de la empresa quedan **fijos y previsibles** (30 % de la mano de obra).
+
+**A cuidar**
+1. **Gustavo queda atado a lo que Pablito decida pagarle.** Antes tenía un compromiso de la empresa (20 %), ahora no. Si Pablito paga poco, Gustavo se va, y el plan de que se convierta en instalador se cae. Por eso la propuesta pone una **referencia del 20 al 30 %** (no obligatoria) y exige que el ayudante **sepa cuánto cobra antes de empezar**. Se puede sacar la referencia si preferís no ponerla. También conviene hablar con Gustavo directamente.
+2. **Cuando el dueño va de ayudante los sábados**, quien decide cuánto cobra es Pablito. Si vos no cobrás nada por ese día, Pablito se queda con todo el 70 % y ahorra el costo del ayudante. Decidí qué querés: cobrar una parte, o no cobrar a cambio de aprender.
+3. **Responsabilidad ante terceros.** En Argentina, quien subcontrata puede ser responsable por incumplimientos laborales o de seguridad social de quien contrata (se llama responsabilidad solidaria). Si los ayudantes de Pablito no están en regla y hay un accidente o un reclamo, la empresa podría quedar expuesta. **Consultalo con un abogado laboral** y pedí, por lo menos, seguro de accidentes personales a cada ayudante. Muchos countries además lo exigen para dejar entrar.
+4. **Control de calidad y de seguridad en los countries.** La empresa tiene que **conocer de antemano** a todas las personas que entren a la casa de un cliente (nombre y DNI), aunque no los contrate. La propuesta lo incluye.
+5. **Quién queda a cargo cuando hay dos instaladores** (Pablito + Gustavo ya habilitado): lo designa la empresa en cada obra.
+6. El **bono de formación (5 % de la mano de obra, para Pablito)** se mantiene solo en las obras que lidere Gustavo durante sus primeros 6 meses.
