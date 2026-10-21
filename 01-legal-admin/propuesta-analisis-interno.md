@@ -60,3 +60,13 @@ Con 3 a 4 obras por mes: unos $570.000 a $760.000 antes de impuestos y de lo que
 4. **Control de calidad y de seguridad en los countries.** La empresa tiene que **conocer de antemano** a todas las personas que entren a la casa de un cliente (nombre y DNI), aunque no los contrate. La propuesta lo incluye.
 5. **Quién queda a cargo cuando hay dos instaladores** (Pablito + Gustavo ya habilitado): lo designa la empresa en cada obra.
 6. El **bono de formación (5 % de la mano de obra, para Pablito)** se mantiene solo en las obras que lidere Gustavo durante sus primeros 6 meses.
+
+## Respuestas del dueño (21/10) y sus consecuencias
+1. **Matrícula de Pablito: no se sabe.** El dueño la tramitaría. Consecuencia: el dueño firma sin instalar, así que la firma depende de checklists, fotos y mediciones de Pablito. **No se sale a obra sin un matriculado que firme.** Averiguar en el Colegio cuánto tarda y qué incumbencias da el título, y preguntarle a Pablito.
+2. **Lo que cobra Pablito: no se sabe.** Es lo primero que hay que preguntarle en la reunión. La tarifa de mano de obra por tipo de obra se arma a partir de eso.
+3. **Disponibilidad del dueño: sábado y domingo.** Una obra de 2 días en fin de semana se puede hacer completa.
+4. **Relevamiento:** el dueño los sábados; Gustavo no puede en la semana; si no, virtual. **Se eliminó la visita técnica paga (2 %)** de la propuesta, ya no aplica. Se creó `02-operaciones/relevamiento-virtual.md`. Riesgo: un relevamiento virtual se equivoca más; por eso todo presupuesto queda sujeto a verificación en obra.
+5. **Pablito trabaja por su cuenta y quiere seguir así.** Cláusula nueva: los clientes y obras propios de cada uno quedan fuera; "cliente de Norte Solar" = a quien se le mandó un presupuesto. Riesgo que queda: que Pablito le ofrezca por su cuenta a un cliente de Norte Solar un precio más bajo. Mitigación: la cláusula de no captación, y que el contacto con el cliente lo maneje siempre la empresa.
+
+## Riesgo principal
+**Todo el conocimiento técnico está en Pablito**, y él puede irse o no estar disponible. Mitigaciones: checklists y fotos de cada obra, que Pablito forme a Gustavo, y sumar un segundo instalador más adelante.

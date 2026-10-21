@@ -11,7 +11,7 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 - Commits en español, descriptivos.
 
 ## Equipo
-- **Dueño** (técnico electromecánico): no instala. Busca trabajos, maneja redes, presupuestos y compras. Solo disponible los sábados (puede ir a obra como ayudante). Tramita la matrícula.
+- **Dueño** (técnico electromecánico): no instala. Busca trabajos, maneja redes, presupuestos y compras. Disponible sábados y domingos: hace los relevamientos y puede ir a obra como ayudante. Tramita la matrícula.
 - **Pablito** (amigo de Gustavo): instalador líder de cuadrilla. Tiene experiencia instalando paneles. Monotributista. Disponibilidad a coordinar.
 - **Gustavo**: electricista de buen nivel, sin experiencia en paneles. Ayudante en formación con camino a instalador. Monotributista. Disponible en la semana.
 - **Olivia** (atención al cliente, redes y administración): no técnica, ~4 h por día. Cobra comisión por venta cerrada (3 %).

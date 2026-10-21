@@ -22,3 +22,6 @@
 | 21/10/2026 | Referido baja de 5 % a 3 % del total. Visita técnica en semana: 2 % si la obra se concreta. Bono de calidad: +5 % sobre la parte. Prueba de 3 meses. Ver `01-legal-admin/propuesta-instaladores/`. |
 | 21/10/2026 | La mano de obra se fija por **tarifa por tipo de obra** (a definir), no por % de materiales. Anticipo recomendado: 70 %. |
 | 21/10/2026 | **Modelo 70 / 30 (decisión del dueño):** 70 % de la mano de obra para el instalador a cargo, 30 % para la empresa. El instalador a cargo les paga a sus ayudantes lo que acuerde con ellos, la empresa no interviene (la propuesta da una referencia del 20 al 30 %, no obligatoria). Reemplaza el 50 / 20 / 30 del mismo día. |
+| 21/10/2026 | Dueño disponible sábados y domingos. Relevamientos: el dueño los sábados; si no se puede, virtual (guía en `02-operaciones/relevamiento-virtual.md`). Todo presupuesto sujeto a verificación en obra. Se elimina la visita técnica paga. |
+| 21/10/2026 | Pablito trabaja por su cuenta y sigue así: sus clientes y obras propios quedan fuera del acuerdo. Cliente de Norte Solar = a quien se le mandó un presupuesto. |
+| 21/10/2026 | No se sale a obra sin un matriculado que firme. El dueño tramita su matrícula. Se desconoce si Pablito está matriculado. |
