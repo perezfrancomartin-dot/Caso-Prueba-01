@@ -2,6 +2,10 @@
 
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
+## 22/10/2026
+- **Pagos:** esquema de cobros, pagos al equipo y a proveedores en `01-legal-admin/pagos-y-cobros.md`. Pendiente: contador (tope del monotributo, cuotas), abogado (cancelación y derecho de arrepentimiento de 10 días), cuenta de la empresa y pestaña "Cobros" en el sistema.
+- **Mar del Sur:** postergado al verano 2027/2028.
+
 ## 21/10/2026
 - **Proyecto fin de año (Mar del Sur, 31/12):** propuesta y análisis en `09-eventos/fin-de-ano-mar-del-sur.md`. **Postergado para el verano 2027/2028** por decisión del dueño. Condiciones para retomarlo en el documento.
 - **Propuesta para instaladores** (Gustavo y Pablito): PDF de 3 páginas listo para conversar en `01-legal-admin/propuesta-instaladores/`, más análisis interno. Modelo 70 / 30: 70 % de la mano de obra para el instalador a cargo (Pablito al principio), que le paga a sus ayudantes lo que acuerde; 30 % para la empresa. Gustavo empieza de ayudante. Se agregaron relevamiento virtual y guía de reunión (`01-legal-admin/reunion-instaladores.md`). Pendiente: actualizar el sistema al modelo 70/30, reunión con ambos, definir tarifa por tipo de obra, saber si Pablito está matriculado, revisión de contador o abogado.
