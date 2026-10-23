@@ -3,7 +3,7 @@
 Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 
 ## Etapa 1: Base (semanas 1 y 2)
-- [x] Elegir el nombre de la marca: Norte Solar
+- [ ] Elegir el nombre definitivo de la marca (en revisión: Cénit, Boreal o Norte Solar). Ver `nombre-y-logo-meta.md`
 - [ ] Verificar que el nombre esté libre: Instagram, Facebook, dominio .com.ar en NIC.ar, marca en INPI
 - [x] Validar las comisiones de Gustavo y Olivia
 - [x] Propuesta para instaladores armada (`01-legal-admin/propuesta-instaladores/`)

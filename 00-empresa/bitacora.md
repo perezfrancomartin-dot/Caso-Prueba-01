@@ -2,6 +2,9 @@
 
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
+## 23/10/2026
+- **Nombre y logo para Meta:** propuesta en `00-empresa/nombre-y-logo-meta.md`. "Norte Solar" es descriptivo y lo usan otras empresas solares (Brasil, Portugal). Recomendación: Cénit (logo "C con sol"), segunda opción Boreal. Pruebas de logo en `06-marketing/logo/`. **Pendiente:** chequear usuarios, dominios e INPI, y elegir. **No crear cuentas hasta decidir el nombre.**
+
 ## 22/10/2026
 - **Pagos:** esquema de cobros, pagos al equipo y a proveedores en `01-legal-admin/pagos-y-cobros.md`. Pendiente: contador (tope del monotributo, cuotas), abogado (cancelación y derecho de arrepentimiento de 10 días), cuenta de la empresa y pestaña "Cobros" en el sistema.
 - **Mar del Sur:** postergado al verano 2027/2028.
