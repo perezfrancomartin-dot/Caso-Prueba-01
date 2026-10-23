@@ -2,6 +2,9 @@
 
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
+## 25/10/2026
+- **Mascota solar:** el dueño trajo un personaje 3D (sol con anteojos y mochila-panel, hecho con la IA de Meta). Ficha, crítica, paleta de marca, prompts para APIMart y guion del primer reel en `06-marketing/mascota/`. Claude no puede operar APIMart: los prompts los corre el dueño. Recomendación: mezclar mascota (educar) con el dueño en cámara (confianza), y probar 3 reels de cada uno. **Pendiente:** correr los prompts A y B, nombrar al personaje, nombre de marca y cuentas.
+
 ## 24/10/2026
 - **Reel #1 "0 instalaciones":** hoja de rodaje completa en `06-marketing/reel-0-instalaciones/` (guion final de ~40 s, clips a grabar, 1 clip con IA aclarado, edición en CapCut, caption y plan de publicación). Cambios al guion del dueño: sin marcas ajenas ni "Tier 1", sin afirmaciones absolutas sobre la competencia, solo Edenor, cupo de 20 boletas, la boleta se manda por mensaje privado. **Pendiente antes de publicar:** nombre y cuentas, definir las "condiciones de fundador" (que no sean descuento), definir el entregable de 24 h.
 
