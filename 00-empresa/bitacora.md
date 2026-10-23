@@ -2,6 +2,9 @@
 
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
+## 24/10/2026
+- **Reel #1 "0 instalaciones":** hoja de rodaje completa en `06-marketing/reel-0-instalaciones/` (guion final de ~40 s, clips a grabar, 1 clip con IA aclarado, edición en CapCut, caption y plan de publicación). Cambios al guion del dueño: sin marcas ajenas ni "Tier 1", sin afirmaciones absolutas sobre la competencia, solo Edenor, cupo de 20 boletas, la boleta se manda por mensaje privado. **Pendiente antes de publicar:** nombre y cuentas, definir las "condiciones de fundador" (que no sean descuento), definir el entregable de 24 h.
+
 ## 23/10/2026
 - **Nombre y logo para Meta:** propuesta en `00-empresa/nombre-y-logo-meta.md`. "Norte Solar" es descriptivo y lo usan otras empresas solares (Brasil, Portugal). Cénit quedó descartado (ya en uso). Nueva recomendación: Apogeo; también Altasol y Soliva/Solira. Pruebas de logo en `06-marketing/logo/`. **Pendiente:** chequear usuarios, dominios e INPI, y elegir. **No crear cuentas hasta decidir el nombre.**
 
