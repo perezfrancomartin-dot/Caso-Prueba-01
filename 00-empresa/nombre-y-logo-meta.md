@@ -1,6 +1,6 @@
 # Nombre y logo pensados para Meta (Instagram, Facebook, WhatsApp)
 
-Estado: **propuesta** (23/10/2026). Las cuentas todavía no están creadas, así que **este es el mejor momento para cambiar el nombre**: después cuesta mucho más (Meta limita y revisa los cambios de nombre de una Página).
+Estado: **propuesta** (23/10/2026). **Cénit descartado** (el dueño comprobó que ya está en uso). Nueva lista abajo. Las cuentas todavía no están creadas, así que **este es el mejor momento para cambiar el nombre**: después cuesta mucho más (Meta limita y revisa los cambios de nombre de una Página).
 
 ## Resumen
 1. **"Norte Solar" tiene un problema:** es un nombre descriptivo y ya lo usan otras empresas solares (en Brasil y en Portugal, por ejemplo). Es difícil de proteger como marca y de encontrar en Google.
@@ -85,3 +85,20 @@ Para cada nombre finalista (empezá por Cénit):
 ## Qué verifiqué y qué no
 **Verificado en la búsqueda:** existencia de empresas solares llamadas Norte Solar en Brasil y Portugal, y Norsol en España, Chile y Noruega; el 14 %/35 %/6 % de las zonas seguras y las medidas de feed y Reels (según guías); el recorte circular de los avatares.
 **No pude verificar:** si los usuarios de Instagram, Facebook o TikTok están libres, los dominios .com.ar, las marcas registradas en el INPI, las reglas oficiales de Meta sobre nombres, y si "Cénit" o "Boreal" ya son marcas registradas en Argentina para estos servicios.
+
+## Actualización: nueva lista tras descartar Cénit
+Criterio nuevo: nombres **inventados o poco comunes** (las palabras del diccionario casi siempre ya tienen dueño) y que **no tengan un homónimo en el rubro solar**. Para el usuario de Instagram **no hace falta el nombre exacto**: `@nombre.solar` o `@nombre.ar` alcanza si nadie del rubro usa ese nombre.
+
+| Nombre | Idea | Lo que encontré en la búsqueda (no prueba que esté libre) |
+|---|---|---|
+| **Apogeo** ⭐ | El punto más alto del sol, como Cénit | Ninguna empresa solar en Argentina |
+| **Altasol** | "Sol en lo alto". Inventado, suena natural en español | Ninguna empresa solar en Argentina |
+| **Soliva / Solira** | Inventados, suenan a "sol" sin ser descriptivos | Nada del rubro |
+| **Solvera** | "Sol de verdad" | Es el nombre de un producto de OpenSolar en Reino Unido. Riesgo de confusión en el rubro |
+| **Helia** | Sol en griego | Existe Helia Energy (Luxemburgo, 2025), instaladora solar. Descartar |
+| Boreal | El norte | Evoca frío, no sol. Usuario probablemente tomado |
+| Norte Solar | El original | Descriptivo y repetido en Brasil y Portugal |
+
+Hay que chequear cada una con los pasos de arriba (usuarios, dominios, INPI, Google). **Qué anotar al chequear:** si el nombre ya está usado, ¿es una empresa del rubro solar o eléctrico, o de otra cosa? Si es de otro rubro y no hay conflicto en las clases de la marca, a veces se puede usar igual con el usuario `.solar`.
+
+Un logo por cada finalista se arma una vez que pasen los chequeos. Ideas ya pensadas: **Apogeo**: una "A" como una cumbre con el sol en la punta. **Altasol**: un sol sobre una línea de horizonte alta.
