@@ -3,7 +3,7 @@
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
 ## 26/10/2026
-- **Foco único:** conseguir la primera obra en 30 días. Plan en `00-empresa/plan-30-dias.md`. Mascota, Mar del Sur, videos con IA, n8n y el rediseño del logo quedan en pausa. Primer paso: lista de 20 conocidos y mensaje pidiendo la boleta. Nombre: fecha límite el miércoles (Apogeo o Altasol; si no, Norte Solar + distintivo).
+- **Foco único:** conseguir la primera obra en 30 días. Plan en `00-empresa/plan-30-dias.md`. Mascota, Mar del Sur, videos con IA, n8n y el rediseño del logo quedan en pausa. **Actualización del mismo día:** los conocidos del dueño no son el público, así que el plan pasa a lanzar Meta ya (perfil con contenido y 3 anuncios chicos con $200.000), con calendario de 10 días. Nombre: fecha límite el miércoles (Apogeo o Altasol; si no, Norte Solar + distintivo).
 
 ## 25/10/2026
 - **Mascota solar:** el dueño trajo un personaje 3D (sol con anteojos y mochila-panel, hecho con la IA de Meta). Ficha, crítica, paleta de marca, prompts para APIMart y guion del primer reel en `06-marketing/mascota/`. Claude no puede operar APIMart: los prompts los corre el dueño. Recomendación: mezclar mascota (educar) con el dueño en cámara (confianza), y probar 3 reels de cada uno. **Pendiente:** correr los prompts A y B, nombrar al personaje, nombre de marca y cuentas.

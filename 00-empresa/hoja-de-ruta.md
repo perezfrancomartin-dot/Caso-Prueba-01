@@ -1,6 +1,6 @@
 # Hoja de ruta
 
-> **Foco actual (26/10/2026):** `plan-30-dias.md`. Todo lo demás está en pausa hasta conseguir la primera obra.
+> **Foco actual (26/10/2026):** `plan-30-dias.md`: lanzar perfil con contenido y 3 anuncios en Meta. Todo lo demás está en pausa.
 
 Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 
