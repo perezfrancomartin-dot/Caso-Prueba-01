@@ -1,5 +1,7 @@
 # Hoja de ruta
 
+> **Foco actual (26/10/2026):** `plan-30-dias.md`. Todo lo demás está en pausa hasta conseguir la primera obra.
+
 Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 
 ## Etapa 1: Base (semanas 1 y 2)
