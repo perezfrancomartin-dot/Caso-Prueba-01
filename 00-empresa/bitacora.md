@@ -55,3 +55,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: primer reel con Soli '4 trucos para bajar tu boleta de luz' (24 s) en 06-marketing/reel-boleta-soli/. Costo APIMart de clips ~0,6 en total (incluye pruebas). Sin números de ahorro inventados.
 - 27/10: carrusel de 3 imágenes Reducí/Reutilizá/Reciclá sobre bosque (06-marketing/publicaciones/carrusel-3r/), con y sin texto. Es compromiso declarado: publicar cuando se cumpla en obra.
 - 27/10: pieza 'Vamos a arrancar' con Soli (terracota y verde) en 06-marketing/publicaciones/vamos-a-arrancar/.
+- 27/10: 4 propuestas de logo nuevo (A sol naciente, B hoja solar, C brújula-sol, D Soli) en paleta terracota/verde/ocre: 06-marketing/logo/nuevo-logo/. Nombre de marca sigue sin decidir (se usó 'Norte Solar' como provisorio; generar.js acepta NOMBRE=...). El logo se había pausado el 26/10 por el foco en la primera obra.
