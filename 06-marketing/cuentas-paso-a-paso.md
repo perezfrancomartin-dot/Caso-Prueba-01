@@ -12,12 +12,12 @@ Imágenes listas en `06-marketing/publicaciones/`:
 
 ## 1. Cuenta de Google (Gmail de la empresa)
 1. Andá a accounts.google.com → **Crear cuenta → Para mi trabajo o mi empresa**.
-2. Nombre: **Norte Solar**. Probá estas direcciones en orden hasta que una esté libre:
-   `nortesolar.ar@gmail.com` · `nortesolarar@gmail.com` · `hola.nortesolar@gmail.com`
+2. Nombre: **Albor Energía Solar**. Probá estas direcciones en orden hasta que una esté libre:
+   `albor.solar@gmail.com` · `alborenergiasolar@gmail.com` · `hola.albor@gmail.com`
 3. Usá **tu celular** para la verificación y activá la **verificación en 2 pasos**.
 4. Guardá la contraseña en un lugar seguro (por ejemplo, el gestor de contraseñas de Google).
 
-Más adelante, cuando compres el dominio nortesolar.com.ar, se puede pasar a un mail tipo `hola@nortesolar.com.ar`.
+Más adelante, cuando compres el dominio (`albor.com.ar`, `alborsolar.com.ar` o `alborenergia.com.ar`), se puede pasar a un mail tipo `hola@albor...com.ar`.
 
 ## 2. Número de WhatsApp de la empresa
 - **Recomendado: un chip nuevo (o eSIM) solo para la empresa.** Así Olivia lo puede manejar sin usar tu número personal, y si un día cambia la persona, el número sigue siendo de la empresa.
@@ -47,15 +47,16 @@ Se necesita un perfil personal de Facebook como administrador (puede ser el tuyo
 
 ## 4. Instagram
 1. Creá la cuenta con el **Gmail de la empresa**. Usuario, en orden de preferencia:
-   `@nortesolar` · `@nortesolar.ar` · `@nortesolarar` · `@norte.solar`
+   `@albor.solar` · `@albor.energia` · `@albor.energiasolar` · `@alborsolar.ar` · `@somos.albor`
+   (`@albor` solo, si estuviera libre, sería lo mejor, pero casi seguro está tomado. Usá el mismo usuario en Facebook y TikTok.)
 2. Pasala a **cuenta profesional → Empresa** (Configuración → Tipo de cuenta). Categoría: igual que en Facebook.
-3. **Nombre:** Norte Solar | Paneles solares
+3. **Nombre:** Albor | Energía Solar
 4. **Biografía** (máximo 150 caracteres):
-   > ☀️ Paneles solares y baterías en Zona Norte
-   > ⚡ Ahorrá en la luz y tené luz en los cortes
-   > 📩 Mandanos tu factura y calculamos tu ahorro gratis
+   > ☀️ Energía solar para tu casa en Zona Norte
+   > ⚡ Paneles, baterías y trabajos eléctricos
+   > 📩 Mandanos tu boleta y te decimos si te conviene
 5. **Botón de contacto:** WhatsApp (el número de la empresa).
-6. Foto: `perfil-1080.png`.
+6. Foto: `06-marketing/logo/albor/perfil-1080-crema.png` (o la verde).
 7. **Subí las 6 publicaciones en orden inverso** (primero la 06, al final la 01), con estos textos:
 
 | Publicación | Texto |

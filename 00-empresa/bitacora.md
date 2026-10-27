@@ -59,3 +59,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: el dueño eligió el logo A (sol naciente). Tercera ronda de nombres en 00-empresa/nombre-v3.md: recomendación Albor (alternativa Alborada); falta chequear usuarios, dominios e INPI.
 - 27/10: nombre Albor elegido. Paquete de logo en 06-marketing/logo/albor/ (horizontal/vertical a color, blanco y negro, símbolo SVG, perfil 1080 en crema y verde, portada Facebook). Pendiente: chequeos de usuario/dominio/INPI; regenerar piezas viejas con el nombre nuevo.
 - 27/10: logo Albor en máxima resolución: PNG x4 y PDF en 06-marketing/logo/albor/alta-resolucion/ y SVG vectorial real (texto a curvas) en 06-marketing/logo/albor/vectorial/ (vectorizar.py).
+- 27/10: nombre y usuario de Instagram definidos (ver decisiones y cuentas-paso-a-paso.md). Falta que el dueño pruebe la disponibilidad del usuario.

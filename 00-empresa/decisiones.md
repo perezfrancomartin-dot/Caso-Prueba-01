@@ -50,3 +50,6 @@
 ## 27/10 — Nombre elegido: Albor
 - El dueño eligió **Albor** (nombre público: **Albor Energía Solar**) con el logo A (sol naciente). Reemplaza a Norte Solar en todo lo nuevo. **Condición:** antes de crear cuentas y pagar nada, chequear usuarios (Instagram/Facebook/TikTok), dominios (NIC.ar) e INPI (clases 37 y 35). Plan B: Alborada; plan C: Norte Solar + distintivo.
 - Soli (mascota) se mantiene. Piezas anteriores con "Norte Solar" quedan como borrador y se regeneran con el nombre nuevo.
+
+## 27/10 — Instagram
+- **Nombre en Instagram:** "Albor | Energía Solar" (campo Nombre, es lo que se busca). **Usuario** en orden: `@albor.solar` · `@albor.energia` · `@albor.energiasolar` · `@alborsolar.ar` · `@somos.albor`. Mismo usuario en Facebook y TikTok. No se puede verificar disponibilidad desde acá: lo prueba el dueño en la app. Biografía actualizada en `06-marketing/cuentas-paso-a-paso.md`.
