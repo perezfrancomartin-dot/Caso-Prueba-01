@@ -2,6 +2,7 @@
 // Correr: NODE_PATH=$(npm root -g) node generar.js
 const { chromium } = require('playwright');
 const path = require('path'); const fs = require('fs');
+const SIN_TEXTO = process.env.SIN_TEXTO === '1';
 const BRAND = 'NORTE SOLAR', TAG = 'ZONA NORTE';
 const U = p => 'file://' + path.resolve(__dirname, '..', p);
 const css = `
@@ -37,12 +38,12 @@ const slides = [
   const out = __dirname; let n = 1;
   for (const s of slides) {
     const dots = slides.map((_, i) => `<i class="${i === n - 1 ? 'on' : ''}"></i>`).join('');
-    const html = `<meta charset=utf-8><style>${css}${themes[s.t]}</style>${s.circle ? '<div class=sun></div>' : ''}<div class=kick>${s.kick}</div><h1>${s.h}</h1><div class=body>${s.body}</div><img class=soli src="${U('soli-' + s.soli + '.png')}"><div class=brand>${BRAND}</div><div class=dots>${dots}</div>`;
+    const html = `<meta charset=utf-8><style>${css}${themes[s.t]}${SIN_TEXTO ? '.kick,h1,.body,.brand{display:none}' : ''}</style>${s.circle ? '<div class=sun></div>' : ''}<div class=kick>${s.kick}</div><h1>${s.h}</h1><div class=body>${s.body}</div><img class=soli src="${U('soli-' + s.soli + '.png')}"><div class=brand>${BRAND}</div><div class=dots>${dots}</div>`;
     const f = path.join(out, `_s${n}.html`); fs.writeFileSync(f, html);
     await pg.goto('file://' + f); await pg.evaluate(() => document.fonts.ready);
     const over = await pg.evaluate(() => { const h = document.querySelector('h1').getBoundingClientRect(), bd = document.querySelector('.body').getBoundingClientRect(); return { hBottom: h.bottom, bodyTop: bd.top, bodyBottom: bd.bottom }; });
-    if (over.hBottom > over.bodyTop || over.bodyBottom > 1250) console.log('REVISAR lámina', n, over);
-    await pg.screenshot({ path: path.join(out, `lamina-${n}.png`) }); fs.unlinkSync(f); n++;
+    if (!SIN_TEXTO && over.hBottom > over.bodyTop || over.bodyBottom > 1250) console.log('REVISAR lámina', n, over);
+    await pg.screenshot({ path: path.join(out, SIN_TEXTO ? `sin-texto-${n}.png` : `lamina-${n}.png`) }); fs.unlinkSync(f); n++;
   }
   await b.close();
 })();
