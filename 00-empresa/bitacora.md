@@ -64,3 +64,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: anuncio corte de luz: elegido fondo B (living con pileta); tres ganchos de prueba en 06-marketing/anuncio-corte-verano/gancho-*.png; formato: 1 imagen.
 - 27/10: anuncio corte de luz: gancho 1 elegido ('Verano · 20:00 hs / Se corta la luz.'). Paso 3: lista de lo que se queda sin luz (versión B, frase abajo, recomendada).
 - 27/10: anuncio corte de luz v2 (paso4-v2-mejorada.png): escena más clara, logo Albor chico arriba a la derecha, frase de abajo más grande.
+- 27/10: el dueño aclara que NO va a subir el anuncio a Meta Ads todavía. Queda listo en 06-marketing/anuncio-corte-verano/ (imagen v2 + texto del anuncio propuesto). Pasos 5 (segmentación y presupuesto) en pausa.
