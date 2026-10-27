@@ -48,3 +48,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - APIMart conectada: prueba exitosa con flux-2-pro (fondo de madera, ~0,036 por imagen). Ver 06-marketing/fondos/.
 - 27/10: al dueño NO le gusta la textura de madera de fondo; le gusta el COLOR amaderado mezclado con verde. Muestras planas: publicaciones/mezcla-1-boleta.png y mezcla-2-corte.png.
 - Soli creada con APIMart (4 poses, ~0,10 en total) y primer carrusel 'Se corta la luz. ¿Y tus paneles?' en 06-marketing/soli/carrusel-corte/.
+- 27/10: el dueño pidió Soli 'tal cual' sobre fondo limpio, sin texto (él lo agrega al subir). Entregado en 06-marketing/soli/para-subir/ (1080x1350, fondo crema) y PNG transparentes en 06-marketing/soli/.
