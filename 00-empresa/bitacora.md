@@ -54,3 +54,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: pieza 'Se corta la luz. Tu casa, no.' (casa con paneles de noche, sin logo ajeno) en 06-marketing/publicaciones/casa-noche/ con 2 textos y versión sin texto. Es imagen de IA, no una obra nuestra; el claim exige batería (ya aclarado en la pieza).
 - 27/10: primer reel con Soli '4 trucos para bajar tu boleta de luz' (24 s) en 06-marketing/reel-boleta-soli/. Costo APIMart de clips ~0,6 en total (incluye pruebas). Sin números de ahorro inventados.
 - 27/10: carrusel de 3 imágenes Reducí/Reutilizá/Reciclá sobre bosque (06-marketing/publicaciones/carrusel-3r/), con y sin texto. Es compromiso declarado: publicar cuando se cumpla en obra.
+- 27/10: pieza 'Vamos a arrancar' con Soli (terracota y verde) en 06-marketing/publicaciones/vamos-a-arrancar/.
