@@ -47,3 +47,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - Versión madera/papel con textura: `06-marketing/publicaciones/textura-1-boleta.png` y `textura-2-corte.png` (el dueño elige entre lisa y textura). El dueño consigue mañana una boleta de Edenor/Edesur para la pieza con números reales.
 - APIMart conectada: prueba exitosa con flux-2-pro (fondo de madera, ~0,036 por imagen). Ver 06-marketing/fondos/.
 - 27/10: al dueño NO le gusta la textura de madera de fondo; le gusta el COLOR amaderado mezclado con verde. Muestras planas: publicaciones/mezcla-1-boleta.png y mezcla-2-corte.png.
+- Soli creada con APIMart (4 poses, ~0,10 en total) y primer carrusel 'Se corta la luz. ¿Y tus paneles?' en 06-marketing/soli/carrusel-corte/.

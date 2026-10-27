@@ -40,3 +40,6 @@
 - Valores ambientales (del dueño, ex scout): reciclar y donar todo lo que se pueda; dejar el lugar mejor de como lo encontramos. Solo se publican como compromiso cuando se cumplan en obra (hay que definir a quién se dona y cómo se recicla).
 - Contenido: tipo "Educación" (explicar la boleta, qué pasa en un corte, mitos), imágenes únicas o máximo 3–4 láminas. Los números (ej. % de impuestos en la boleta) solo de una boleta real verificada.
 - Frase madre propuesta: "No vendemos paneles. Diseñamos cómo tu casa produce su propia energía." Promesa: "Si con tu boleta no te conviene, te lo decimos."
+
+## 27/10 — Mascota "Soli"
+- La mascota se llama **Soli** (sol joven, explica en contenido educativo). Look nuevo en paleta de marca natural: ámbar, verde musgo, marrón y pañuelo crema tipo scout. Carpeta `06-marketing/soli/`.
