@@ -66,3 +66,6 @@ La imagen "También somos electricistas" (ya hecha) puede esperar: diluye el men
 - [ ] Elegir cuáles armar (mi sugerencia: #1, #3, #5, #6 y #7 primero)
 - [ ] Sacar fotos de las personas (si se elige #6)
 - [ ] Nombre de la marca (las plantillas se rehacen en minutos si cambia)
+
+## Actualización 27/10/2026
+Sin fotos de personas por ahora: se descarta "Quiénes somos" (#6). Se armaron los carruseles #1, #3 (boleta), #5 y #7 en `06-marketing/publicaciones/carruseles/` (captions y notas en `captions.md`).

@@ -3,7 +3,7 @@
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
 ## 27/10/2026
-- **Primeras publicaciones de Instagram (sin videos):** menú de 12 ideas con evidencia y orden recomendado de las primeras 9 en `06-marketing/ideas-primeras-publicaciones.md`. Prioridad sugerida: preguntas para hacerle a un instalador, cómo leer tu boleta, lo que NO prometemos, quiénes somos (fotos reales) y cómo trabajamos. Pendiente: elegir cuáles armar y sacar fotos de las personas.
+- **Primeras publicaciones de Instagram (sin videos):** menú de 12 ideas con evidencia y orden recomendado de las primeras 9 en `06-marketing/ideas-primeras-publicaciones.md`. Prioridad sugerida: preguntas para hacerle a un instalador, cómo leer tu boleta, lo que NO prometemos, quiénes somos (fotos reales) y cómo trabajamos. **Sin fotos de personas por ahora.** Armados 4 carruseles (32 láminas) en `06-marketing/publicaciones/carruseles/`: 7 preguntas para hacerle a un instalador, cómo leer tu boleta, lo que NO prometemos y cómo trabajamos. Pendiente antes de publicar: nombre decidido, cuentas creadas, y resolver matrícula y seguros (el carrusel 1 invita a preguntarlos).
 
 ## 26/10/2026
 - **Foco único:** conseguir la primera obra en 30 días. Plan en `00-empresa/plan-30-dias.md`. Mascota, Mar del Sur, videos con IA, n8n y el rediseño del logo quedan en pausa. **Actualización del mismo día:** los conocidos del dueño no son el público, así que el plan pasa a lanzar Meta ya (perfil con contenido y 3 anuncios chicos con $200.000), con calendario de 10 días. Nombre: fecha límite el miércoles (Apogeo o Altasol; si no, Norte Solar + distintivo).
