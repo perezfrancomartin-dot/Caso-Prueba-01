@@ -10,4 +10,3 @@ Reglas: fondos sin texto ni personas; las imágenes con IA se marcan como tales 
 
 | Archivo | Modelo | Prompt |
 |---|---|---|
-| fondo-madera-prueba.jpg | flux-2-pro | tabla de madera cálida, vista cenital, sin texto ni objetos |

@@ -46,3 +46,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - El dueño aprobó la persona; pidió estilo natural/amaderado + verde y contenido educativo tipo Meta. Se hicieron 2 muestras: `06-marketing/publicaciones/estilo-1-boleta.png` y `estilo-2-corte.png`. Pendiente: su OK al estilo, definir compromisos ambientales concretos y armar el set de 6 piezas.
 - Versión madera/papel con textura: `06-marketing/publicaciones/textura-1-boleta.png` y `textura-2-corte.png` (el dueño elige entre lisa y textura). El dueño consigue mañana una boleta de Edenor/Edesur para la pieza con números reales.
 - APIMart conectada: prueba exitosa con flux-2-pro (fondo de madera, ~0,036 por imagen). Ver 06-marketing/fondos/.
+- 27/10: al dueño NO le gusta la textura de madera de fondo; le gusta el COLOR amaderado mezclado con verde. Muestras planas: publicaciones/mezcla-1-boleta.png y mezcla-2-corte.png.
