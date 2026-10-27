@@ -50,3 +50,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - Soli creada con APIMart (4 poses, ~0,10 en total) y primer carrusel 'Se corta la luz. ¿Y tus paneles?' en 06-marketing/soli/carrusel-corte/.
 - 27/10: el dueño pidió Soli 'tal cual' sobre fondo limpio, sin texto (él lo agrega al subir). Entregado en 06-marketing/soli/para-subir-sin-texto/ (mismas láminas del carrusel, sin letras, 1080x1350).
 - 27/10: imagen eco (Tierra de musgo y plantas, sin texto) en 06-marketing/fondos/tierra-eco-instagram-1080x1350.jpg; láminas de Soli sin texto ni puntos.
+- 27/10: pieza 'Tecnología eco-amigable' en castellano (isla verde con casa con paneles) en 06-marketing/publicaciones/isla-eco/ (con texto y versión sin texto). Textos son traducción del ejemplo de Meta; revisar claims ambientales antes de publicar.
