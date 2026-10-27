@@ -1,5 +1,7 @@
 // Paquete de logo Albor. Correr: NODE_PATH=$(npm root -g) node generar.js
 const { chromium } = require('playwright'); const path = require('path'); const fs = require('fs');
+const SCALE = Number(process.env.SCALE || 1), OUT = process.env.OUT || '.';
+fs.mkdirSync(path.join(__dirname, OUT), { recursive: true });
 const U = p => 'file://' + path.resolve(__dirname, p);
 const P = { terra: '#B0532A', verde: '#3E5A33', verde2: '#567A45', ocre: '#E3B55A', crema: '#F3E9D8', marron: '#5B3F2A' };
 const polar = (cx, cy, r, a) => [cx + r * Math.cos(a), cy + r * Math.sin(a)];
@@ -34,10 +36,12 @@ const piezas = [
 (async () => {
   const b = await chromium.launch();
   for (const [n, w, h, bg, body] of piezas) {
-    const pg = await b.newPage({ viewport: { width: w, height: h } });
+    const pg = await b.newPage({ viewport: { width: w, height: h }, deviceScaleFactor: SCALE });
     const f = path.join(__dirname, '_p.html'); fs.writeFileSync(f, `<meta charset=utf-8><style>${font}html,body{background:${bg};width:${w}px;height:${h}px}body{display:flex;align-items:center;justify-content:center}</style>${body}`);
     await pg.goto('file://' + f); await pg.evaluate(() => document.fonts.ready);
-    await pg.screenshot({ path: path.join(__dirname, n + '.png'), omitBackground: bg === 'transparent' }); await pg.close();
+    await pg.screenshot({ path: path.join(__dirname, OUT, n + '.png'), omitBackground: bg === 'transparent' });
+    if (process.env.PDF && !n.startsWith('perfil')) await pg.pdf({ path: path.join(__dirname, OUT, n + '.pdf'), width: w + 'px', height: h + 'px', printBackground: true, pageRanges: '1' });
+    await pg.close();
   }
   fs.unlinkSync(path.join(__dirname, '_p.html')); fs.writeFileSync(path.join(__dirname, 'simbolo-albor.svg'), svg(full, 580)); await b.close();
 })();
