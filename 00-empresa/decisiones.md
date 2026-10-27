@@ -46,3 +46,7 @@
 
 ## 27/10 — Logo elegido
 - **Logo A "sol naciente con brote"** elegido por el dueño (paleta terracota, verde y ocre). Nombre todavía sin decidir; ronda 3 en `00-empresa/nombre-v3.md`.
+
+## 27/10 — Nombre elegido: Albor
+- El dueño eligió **Albor** (nombre público: **Albor Energía Solar**) con el logo A (sol naciente). Reemplaza a Norte Solar en todo lo nuevo. **Condición:** antes de crear cuentas y pagar nada, chequear usuarios (Instagram/Facebook/TikTok), dominios (NIC.ar) e INPI (clases 37 y 35). Plan B: Alborada; plan C: Norte Solar + distintivo.
+- Soli (mascota) se mantiene. Piezas anteriores con "Norte Solar" quedan como borrador y se regeneran con el nombre nuevo.
