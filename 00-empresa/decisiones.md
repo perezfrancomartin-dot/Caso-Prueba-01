@@ -43,3 +43,6 @@
 
 ## 27/10 — Mascota "Soli"
 - La mascota se llama **Soli** (sol joven, explica en contenido educativo). Look nuevo en paleta de marca natural: ámbar, verde musgo, marrón y pañuelo crema tipo scout. Carpeta `06-marketing/soli/`.
+
+## 27/10 — Logo elegido
+- **Logo A "sol naciente con brote"** elegido por el dueño (paleta terracota, verde y ocre). Nombre todavía sin decidir; ronda 3 en `00-empresa/nombre-v3.md`.
