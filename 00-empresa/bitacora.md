@@ -3,6 +3,7 @@
 Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente arriba.
 
 ## 27/10/2026
+- **Posicionamiento y audiencia:** el dueño pidió publicaciones menos aburridas y con foco ambiental. Investigación y propuesta en `06-marketing/posicionamiento-y-audiencia.md`. Hallazgos: en Argentina la compra se describe como decisión económica y de tranquilidad antes que ambiental; el ambiente funciona como valor con pruebas, sin greenwashing. Propuesta de frase madre y 8 piezas cortas. Los carruseles largos quedan para más adelante. **Pendiente de aprobar.**
 - **Primeras publicaciones de Instagram (sin videos):** menú de 12 ideas con evidencia y orden recomendado de las primeras 9 en `06-marketing/ideas-primeras-publicaciones.md`. Prioridad sugerida: preguntas para hacerle a un instalador, cómo leer tu boleta, lo que NO prometemos, quiénes somos (fotos reales) y cómo trabajamos. **Sin fotos de personas por ahora.** Armados 4 carruseles (32 láminas) en `06-marketing/publicaciones/carruseles/`: 7 preguntas para hacerle a un instalador, cómo leer tu boleta, lo que NO prometemos y cómo trabajamos. Pendiente antes de publicar: nombre decidido, cuentas creadas, y resolver matrícula y seguros (el carrusel 1 invita a preguntarlos).
 
 ## 26/10/2026
