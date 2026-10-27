@@ -41,3 +41,6 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 2. Conseguir los primeros clientes por redes y anuncios (Guido no respondió).
 3. Cotizar los precios estimados del sistema.
 4. Producir los 6 videos en APIMart y lanzar la prueba de Meta Ads.
+
+## 27/10 (tarde)
+- El dueño aprobó la persona; pidió estilo natural/amaderado + verde y contenido educativo tipo Meta. Se hicieron 2 muestras: `06-marketing/publicaciones/estilo-1-boleta.png` y `estilo-2-corte.png`. Pendiente: su OK al estilo, definir compromisos ambientales concretos y armar el set de 6 piezas.

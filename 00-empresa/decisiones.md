@@ -34,3 +34,9 @@
 | 25/10/2026 | **Se evalúa una mascota animada 3D** para los videos de Meta (en prueba, no reemplaza al dueño en cámara). Paleta de marca: ámbar y azul marino. Narración con la voz del dueño, sin lip-sync. La mascota nunca aparece en obras reales. No se usan las palabras Disney ni Pixar. |
 | 26/10/2026 | **Foco único por 30 días: la primera obra.** Se pausan mascota, Mar del Sur, videos con IA, automatizaciones y rediseño del logo. Los primeros clientes se buscan entre conocidos. El nombre se decide el miércoles: Apogeo, Altasol o, si no pasan, Norte Solar + distintivo. |
 | 26/10/2026 | **Los conocidos del dueño no son el público.** Se lanza Meta sin esperar la primera obra: perfil con las 6 publicaciones + 3 anuncios (2 imágenes y el reel "0 instalaciones") a WhatsApp, $200.000 en ~4 semanas. Condiciones: nombre decidido, cuentas creadas, Olivia respondiendo en menos de 5 minutos, matrícula en trámite. Se pide a Gustavo y Pablito 3 contactos cada uno. |
+
+## 27/10 — Identidad natural y contenido educativo
+- Estilo visual: "natural / medio hippie", tonos amaderados (marrón #4A3322, crema #F3E9D8, terracota #B5651D) + verde musgo #3E5A33 y ocre #E3B55A. Tipografías: Fraunces (títulos) + DM Sans (texto).
+- Valores ambientales (del dueño, ex scout): reciclar y donar todo lo que se pueda; dejar el lugar mejor de como lo encontramos. Solo se publican como compromiso cuando se cumplan en obra (hay que definir a quién se dona y cómo se recicla).
+- Contenido: tipo "Educación" (explicar la boleta, qué pasa en un corte, mitos), imágenes únicas o máximo 3–4 láminas. Los números (ej. % de impuestos en la boleta) solo de una boleta real verificada.
+- Frase madre propuesta: "No vendemos paneles. Diseñamos cómo tu casa produce su propia energía." Promesa: "Si con tu boleta no te conviene, te lo decimos."
