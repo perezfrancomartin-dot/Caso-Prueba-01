@@ -24,5 +24,5 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 - Capacidad estimada: 3 o 4 instalaciones por mes al principio.
 - Herramientas: Claude Pro + Claude Code, APIMart (API de modelos de IA de imagen, video y audio), conectores de Gmail, Google Calendar, Drive, Docs y Canva.
 - Sistema de gestión publicado: https://claude.ai/artifact/5EheuufRYVNZ6UfrEkMJwQ (fuente en `08-sistema/`). Su base de datos tiene `clientes/*` y `config/precios`.
-- APIMart no se conecta con Claude: se usa a mano. Claude entrega prompts listos para copiar.
+- APIMart: desde 27/10 Claude puede usarla (API `https://api.apimart.ai/v1`, clave inyectada por el entorno, nunca en el repo). Ver `06-marketing/fondos/README.md`. Avisar el costo antes de generar varias imágenes.
 - Al terminar algo importante, actualizá `00-empresa/bitacora.md`.
