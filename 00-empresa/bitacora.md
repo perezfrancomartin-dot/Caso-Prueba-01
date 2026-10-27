@@ -44,3 +44,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 
 ## 27/10 (tarde)
 - El dueño aprobó la persona; pidió estilo natural/amaderado + verde y contenido educativo tipo Meta. Se hicieron 2 muestras: `06-marketing/publicaciones/estilo-1-boleta.png` y `estilo-2-corte.png`. Pendiente: su OK al estilo, definir compromisos ambientales concretos y armar el set de 6 piezas.
+- Versión madera/papel con textura: `06-marketing/publicaciones/textura-1-boleta.png` y `textura-2-corte.png` (el dueño elige entre lisa y textura). El dueño consigue mañana una boleta de Edenor/Edesur para la pieza con números reales.
