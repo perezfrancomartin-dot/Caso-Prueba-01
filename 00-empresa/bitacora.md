@@ -52,3 +52,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: imagen eco (Tierra de musgo y plantas, sin texto) en 06-marketing/fondos/tierra-eco-instagram-1080x1350.jpg; láminas de Soli sin texto ni puntos.
 - 27/10: pieza 'Tecnología eco-amigable' en castellano (isla verde con casa con paneles) en 06-marketing/publicaciones/isla-eco/ (con texto y versión sin texto). Textos son traducción del ejemplo de Meta; revisar claims ambientales antes de publicar.
 - 27/10: pieza 'Se corta la luz. Tu casa, no.' (casa con paneles de noche, sin logo ajeno) en 06-marketing/publicaciones/casa-noche/ con 2 textos y versión sin texto. Es imagen de IA, no una obra nuestra; el claim exige batería (ya aclarado en la pieza).
+- 27/10: primer reel con Soli '4 trucos para bajar tu boleta de luz' (24 s) en 06-marketing/reel-boleta-soli/. Costo APIMart de clips ~0,6 en total (incluye pruebas). Sin números de ahorro inventados.
