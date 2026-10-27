@@ -49,3 +49,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: al dueño NO le gusta la textura de madera de fondo; le gusta el COLOR amaderado mezclado con verde. Muestras planas: publicaciones/mezcla-1-boleta.png y mezcla-2-corte.png.
 - Soli creada con APIMart (4 poses, ~0,10 en total) y primer carrusel 'Se corta la luz. ¿Y tus paneles?' en 06-marketing/soli/carrusel-corte/.
 - 27/10: el dueño pidió Soli 'tal cual' sobre fondo limpio, sin texto (él lo agrega al subir). Entregado en 06-marketing/soli/para-subir-sin-texto/ (mismas láminas del carrusel, sin letras, 1080x1350).
+- 27/10: imagen eco (Tierra de musgo y plantas, sin texto) en 06-marketing/fondos/tierra-eco-instagram-1080x1350.jpg; láminas de Soli sin texto ni puntos.
