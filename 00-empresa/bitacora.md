@@ -67,3 +67,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 27/10: el dueño aclara que NO va a subir el anuncio a Meta Ads todavía. Queda listo en 06-marketing/anuncio-corte-verano/ (imagen v2 + texto del anuncio propuesto). Pasos 5 (segmentación y presupuesto) en pausa.
 - 28/10: planeta de plantas con 3 paneles solares integrados (idea del dueño) en 06-marketing/publicaciones/tierra-solar/ (v1 más visible, v2 más sutil), sin texto.
 - 29/10: plan orgánico (cómo aparecerle a la persona compradora sin pagar anuncios) en 06-marketing/plan-organico.md.
+- 29/10: plan del feed de Instagram (12 publicaciones, grilla) en 06-marketing/feed/. Regla: sin cara del dueño; contenido nuevo con IA salvo fotos reales sin personas cuando haya obras.
