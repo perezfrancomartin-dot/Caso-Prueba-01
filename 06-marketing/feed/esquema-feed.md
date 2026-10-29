@@ -28,3 +28,9 @@ Nunca dos publicaciones del mismo color una al lado de la otra (ni arriba ni aba
 ## Cómo se hace cada una
 1. Cambiar el contenido en `portadas/` (o pedirle a Claude el contenido real: boleta, preguntas, kWh).
 2. Para las que faltan: la 5 necesita una boleta real; la 12 necesita una obra real; la 9 necesita las donaciones/reciclaje definidos.
+
+## Estilo nuevo elegido por el dueño (29/10): "objeto 3D + palabra gigante"
+- Fondo crema liso, **una palabra enorme en arena** detrás (SOL, BOLETA, kWh, el número 3, SOLI), **un objeto 3D realista** delante (casa con paneles, boleta con lupa, heladera terracota, carpeta con lista) y un **titular corto en pino y terracota**. Logo centrado abajo.
+- Piezas hechas (en `estilo-3d/` y `prueba-estilo-3d/`): casa "Tu casa, con energía del sol" (publicación 4), cómo leer tu boleta (5), 3 preguntas (8), qué es un kWh (10), Soli (11). Mismo estilo, para reemplazar o sumar a las plantillas planas.
+- Los fondos se generan con APIMart (~0,02 c/u) pidiendo la palabra gigante en la imagen; **hay que revisar que la palabra se lea bien** (a veces la IA deforma letras). El texto del titular lo pone el código.
+- Alternar este estilo (claro) con las fotos oscuras del dolor y las piezas de color plano.

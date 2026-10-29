@@ -5,18 +5,18 @@ const T = [
   { n: 1, img: '../publicaciones/vamos-a-arrancar/vamos-a-arrancar-terracota-1080x1350.png', t: 'Vamos a arrancar', st: 'ok' },
   { n: 2, img: '../anuncio-corte-verano/paso4-v2-mejorada.png', t: 'Se corta la luz', st: 'ok' },
   { n: 3, img: '../soli/carrusel-corte/lamina-1.png', t: 'Soli: ¿y tus paneles? (carrusel)', st: 'ok' },
-  { n: 4, img: 'portadas/04-lugar-mejor.png', t: 'Dejamos el lugar mejor', st: 'ok' },
-  { n: 5, img: 'portadas/05-como-leer-tu-boleta.png', t: 'Cómo leer tu boleta', st: 'tpl' },
+  { n: 4, img: '../feed/prueba-estilo-3d/prueba-1-casa-palabra-gigante.png', t: 'Tu casa, con energía del sol', st: 'ok' },
+  { n: 5, img: 'estilo-3d/boleta-como-leer.png', t: 'Cómo leer tu boleta', st: 'tpl' },
   { n: 6, img: 'reel-portada.png', t: 'Reel: 4 trucos', st: 'ok' },
   { n: 7, img: 'portadas/07-como-trabajamos.png', t: 'Cómo trabajamos', st: 'tpl' },
-  { n: 8, img: 'portadas/08-tres-preguntas.png', t: '3 preguntas', st: 'tpl' },
+  { n: 8, img: 'estilo-3d/tres-preguntas.png', t: '3 preguntas', st: 'tpl' },
   { n: 9, img: '../publicaciones/carrusel-3r/imagen-1-reduce.png', t: 'Reducí · Reutilizá · Reciclá', st: 'cond' },
-  { n: 10, img: 'portadas/10-que-es-un-kwh.png', t: 'Qué es un kWh', st: 'tpl' },
-  { n: 11, img: 'portadas/11-soli-quien-es.png', t: 'Soli, quién es', st: 'tpl' },
+  { n: 10, img: 'estilo-3d/kwh-que-es.png', t: 'Qué es un kWh', st: 'tpl' },
+  { n: 11, img: 'estilo-3d/soli-presentacion.png', t: 'Soli, quién es', st: 'tpl' },
   { n: 12, img: 'portadas/12-obra-real.png', t: 'Obra real', st: 'fut' },
 ];
 const orden = [[12, 11, 10], [9, 8, 7], [6, 5, 4], [3, 2, 1]];
-const lab = { ok: '', tpl: 'PLANTILLA: FALTA EL CONTENIDO', cond: 'SOLO SI YA DONAMOS / RECICLAMOS', fut: 'FUTURA: CON OBRA REAL' };
+const lab = { ok: '', tpl: 'DISEÑO LISTO · FALTA EL CONTENIDO', cond: 'SOLO SI YA DONAMOS / RECICLAMOS', fut: 'FUTURA: CON OBRA REAL' };
 const tile = x => `<div class=t style="background:url(${U(x.img)}) center/cover"><span class=n>${x.n}</span>${lab[x.st] ? `<span class="tg ${x.st}">${lab[x.st]}</span>` : ''}</div>`;
 const html = `<meta charset=utf-8><style>
 @font-face{font-family:Fr;src:url(${U('../soli/fuentes/Fraunces-800.woff2')});font-weight:100 900}

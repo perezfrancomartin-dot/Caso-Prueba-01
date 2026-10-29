@@ -73,3 +73,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 29/10: paleta Bosque y Sol aplicada: logo regenerado, carrusel de Soli y 'Vamos a arrancar' regenerados con Albor, esquema del feed (grilla y plantillas) en 06-marketing/feed/. El reel se está rehaciendo en la paleta nueva.
 - 29/10: reel de los 4 trucos rehecho en la paleta Bosque y Sol (pino y terracota).
 - 29/10: prueba de estilo 'objeto 3D + palabra gigante' (inspirado en el perfil de referencia, en paleta Bosque y Sol): 3 piezas en 06-marketing/feed/prueba-estilo-3d/. Costo APIMart ~0,08. Decisión pendiente del dueño: si se suma al esquema.
+- 29/10: al dueño le encantó el estilo 'objeto 3D + palabra gigante'. Hechas 5 piezas en ese estilo (4, 5, 8, 10, 11); grilla actualizada.
