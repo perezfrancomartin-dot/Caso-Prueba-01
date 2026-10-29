@@ -4,7 +4,7 @@ const { chromium } = require('playwright'); const path = require('path'); const 
 const OUT = process.argv[2]; fs.mkdirSync(OUT, { recursive: true });
 const FPS = 30, DUR = 24;
 const U = p => 'file://' + path.resolve(__dirname, p);
-const cream = '#F3E9D8', amber = '#E3B55A', brown = '#5B3F2A', green = '#3E5A33';
+const cream = '#F7F2E7', amber = '#D9A441', brown = '#1F3A2D', green = '#4E7A52';
 const icons = {
   boleta: `<svg viewBox="0 0 200 240"><rect x="20" y="10" width="160" height="220" rx="14" fill="${cream}"/><rect x="40" y="40" width="80" height="14" rx="6" fill="${brown}"/><rect x="40" y="70" width="120" height="10" rx="5" fill="#b8a68a"/><rect x="40" y="92" width="100" height="10" rx="5" fill="#b8a68a"/><path d="M110 120 L80 170 H105 L95 215 L135 155 H110 Z" fill="${amber}" stroke="${brown}" stroke-width="5" stroke-linejoin="round"/></svg>`,
   aire: `<svg viewBox="0 0 240 200"><rect x="10" y="20" width="220" height="80" rx="18" fill="${cream}"/><rect x="30" y="72" width="180" height="12" rx="6" fill="#b8a68a"/><circle cx="198" cy="46" r="7" fill="#7cc576"/><g fill="none" stroke="#8fd3e8" stroke-width="8" stroke-linecap="round"><path d="M50 125 q10 12 0 24 t0 24"/><path d="M120 125 q10 12 0 24 t0 24"/><path d="M190 125 q10 12 0 24 t0 24"/></g></svg>`,
@@ -32,7 +32,7 @@ const html = `<meta charset=utf-8><style>
 .sub{position:absolute;left:80px;right:80px;font-weight:700;font-size:44px;line-height:1.3;color:${cream};opacity:.95}
 .ic{position:absolute;left:70px;top:900px;width:340px}
 .ic svg{width:100%;display:block}
-.big{position:absolute;left:60px;top:760px;font:800 190px/1 Fr;color:${amber}}
+.big{position:absolute;left:60px;top:760px;font:800 190px/1 Fr;color:${cream}}
 .glow{position:absolute;left:30px;top:850px;width:440px;height:440px;border-radius:50%;background:radial-gradient(${amber},transparent 65%);opacity:0}
 .prog{position:absolute;left:0;top:0;height:10px;background:${amber};width:0}
 .cta .t{font-size:92px}
@@ -66,7 +66,7 @@ window.render = function (t, scenes) {
       if (s.anim === 'door') ic.style.transform = tr + ' perspective(500px) rotateY(' + (-35 * (1 - eo(cl((lt - 1.4) / 0.6)))) + 'deg)';
       if (s.anim === 'glow') { document.getElementById('gl' + i).style.opacity = 0.35 + 0.35 * Math.sin(lt * 5) * cl(lt - 0.8); } }
     const bg = document.getElementById('bg' + i);
-    if (bg) { pop(bg, lt, 0.3, 0.4); const v = Math.round(30 - 6 * eo(cl((lt - 0.9) / 1.6))); bg.textContent = v + '°'; bg.style.color = v === 24 ? '${amber}' : '${cream}'; }
+    if (bg) { pop(bg, lt, 0.3, 0.4); const v = Math.round(30 - 6 * eo(cl((lt - 0.9) / 1.6))); bg.textContent = v + '°'; bg.style.color = v === 24 ? '${brown}' : '${cream}'; }
     const pl = document.getElementById('pl' + i); if (pl) pop(pl, lt, 1.4, 0.4);
   });
 };`;

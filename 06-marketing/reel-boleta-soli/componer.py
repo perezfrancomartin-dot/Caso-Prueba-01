@@ -6,7 +6,7 @@ from PIL import Image
 ov_dir, clips_dir, out = sys.argv[1], sys.argv[2], sys.argv[3]
 PREVIEW = '--preview' in sys.argv
 FPS, W, H = 30, 1080, 1920
-BG = {'h': (62, 90, 51), '1': (91, 63, 42), '2': (62, 90, 51), '3': (91, 63, 42), '4': (62, 90, 51), 'c': (91, 63, 42)}
+BG = {'h': (31, 58, 45), '1': (181, 86, 43), '2': (31, 58, 45), '3': (181, 86, 43), '4': (31, 58, 45), 'c': (181, 86, 43)}
 # escena: (inicio, fin, clave de fondo, clip, escala de Soli, x centro, base y, espejar)
 S = [(0, 3, 'h', 'corte', 1.0, 700, 1420, False), (3, 7, '1', 'explica', 1.0, 720, 1420, False), (7, 11, '2', 'explica', 1.0, 700, 1420, True),
      (11, 15, '3', 'explica', 1.0, 720, 1420, False), (15, 19, '4', 'explica', 1.0, 700, 1420, True), (19, 24, 'c', 'cierre', 0.85, 720, 1420, False)]

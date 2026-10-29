@@ -70,3 +70,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 29/10: plan del feed de Instagram (12 publicaciones, grilla) en 06-marketing/feed/. Regla: sin cara del dueño; contenido nuevo con IA salvo fotos reales sin personas cuando haya obras.
 - 29/10: comparación de 3 paletas (A actual, B más premium, C amanecer) en 06-marketing/logo/albor/comparacion-paletas.png; recomendación: B (ajuste, no cambio). Pendiente decisión del dueño.
 - 29/10: tres sistemas de color para escalar la marca (Bosque y Sol, Pino y Cielo, Amanecer) en 06-marketing/logo/albor/paletas-para-escalar.*; recomendada la 1. Pendiente decisión del dueño.
+- 29/10: paleta Bosque y Sol aplicada: logo regenerado, carrusel de Soli y 'Vamos a arrancar' regenerados con Albor, esquema del feed (grilla y plantillas) en 06-marketing/feed/. El reel se está rehaciendo en la paleta nueva.

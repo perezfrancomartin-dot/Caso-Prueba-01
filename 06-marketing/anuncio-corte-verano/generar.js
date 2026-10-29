@@ -11,13 +11,13 @@ const css = `
 @font-face{font-family:DM;src:url(${U('../soli/fuentes/DMSans-700.woff2')});font-weight:100 900}
 *{margin:0;box-sizing:border-box}.bgi{position:absolute;inset:0;background:url(${U('fondo-b-interior-sin-texto.jpg')}) center/cover}.v2 .bgi,.v2body .bgi{filter:brightness(1.22) contrast(1.06) saturate(1.05)}.f2{font-size:54px!important;bottom:70px!important}.logo{position:absolute;right:70px;top:100px;height:84px}body{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:DM;color:#F3E9D8}
 .g{position:absolute;left:0;right:0;top:0;height:720px;background:linear-gradient(#06101a 0%,rgba(6,16,26,.86) 45%,transparent 100%)}
-.k{position:absolute;left:80px;top:110px;font-weight:800;font-size:34px;letter-spacing:.2em;color:#E3B55A}
+.k{position:absolute;left:80px;top:110px;font-weight:800;font-size:34px;letter-spacing:.2em;color:#D9A441}
 .lg{position:absolute;right:0;top:760px;width:600px;bottom:0;background:linear-gradient(90deg,transparent,rgba(5,10,16,.78) 45%)}
 .ls{position:absolute;right:70px;top:880px;list-style:none;text-align:left;width:420px}
 .ls li{font:700 44px/1.2 DM;margin-bottom:26px;padding-left:34px;position:relative;text-shadow:0 2px 14px rgba(0,0,0,.7)}
-.ls li:before{content:'';position:absolute;left:0;top:18px;width:16px;height:16px;border-radius:50%;background:#E3B55A}
+.ls li:before{content:'';position:absolute;left:0;top:18px;width:16px;height:16px;border-radius:50%;background:#D9A441}
 .lb{position:absolute;left:0;right:0;bottom:0;height:330px;background:linear-gradient(transparent,rgba(5,10,16,.88) 55%)}
-.fr{position:absolute;left:80px;right:80px;bottom:80px;font:700 46px/1.3 DM;text-shadow:0 2px 14px rgba(0,0,0,.7)}.fr b{color:#E3B55A}
+.fr{position:absolute;left:80px;right:80px;bottom:80px;font:700 46px/1.3 DM;text-shadow:0 2px 14px rgba(0,0,0,.7)}.fr b{color:#D9A441}
 h1{position:absolute;left:80px;right:80px;font:800 150px/1.0 Fr;text-shadow:0 4px 24px rgba(0,0,0,.5)}`;
 (async () => {
   const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 1080, height: 1350 } });

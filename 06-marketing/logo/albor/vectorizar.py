@@ -25,7 +25,7 @@ def simbolo(c, ident='k'):
     L1 = 'M100 178 C66 178 50 156 50 128 C84 128 100 150 100 178Z'; L2 = 'M100 178 C134 178 150 156 150 128 C116 128 100 150 100 178Z'
     mk = f'<defs><mask id="{ident}"><rect width="200" height="200" fill="#fff"/><path d="{L1}" fill="#000" stroke="#000" stroke-width="11"/><path d="{L2}" fill="#000" stroke="#000" stroke-width="11"/></mask></defs>' if c.get('knock') else ''
     return f'{mk}<circle cx="100" cy="112" r="40" fill="{c["sun"]}"{f" mask=\"url(#{ident})\"" if c.get("knock") else ""}/>{rays}<path d="{L1}" fill="{c["l1"]}"/><path d="{L2}" fill="{c["l2"]}"/>'
-COLOR = dict(rays='#B0532A', sun='#E3B55A', l1='#3E5A33', l2='#567A45'); mono = lambda col: dict(rays=col, sun=col, l1=col, l2=col, knock=True)
+COLOR = dict(rays='#B5562B', sun='#D9A441', l1='#1F3A2D', l2='#4E7A52'); mono = lambda col: dict(rays=col, sun=col, l1=col, l2=col, knock=True)
 def horizontal(c, w, d, ident):
     s = 150 / 180; sym = f'<g transform="scale({s}) translate(-10 -20)">{simbolo(c, ident)}</g>'
     t1, w1 = texto(FR, 'Albor', 112, 174, 88, w); t2, _ = texto(DM, 'ENERGÍA SOLAR', 26, 176, 128, d, 0.36)
@@ -38,7 +38,7 @@ def vertical(c, w, d, ident):
     sym = f'<g transform="translate({cx - 130} 0) scale({s}) translate(-10 -20)">{simbolo(c, ident)}</g>'
     t1, _ = texto(FR, 'Albor', 130, cx - w1 / 2, 400, w); t2, _ = texto(DM, 'ENERGÍA SOLAR', 28, cx - w2 / 2, 452, d, 0.38)
     return W, 470, sym + t1 + t2
-variantes = {'color': (COLOR, '#3E5A33', '#B0532A'), 'blanco': (mono('#FFFFFF'), '#FFFFFF', '#FFFFFF'), 'negro': (mono('#1A1A1A'), '#1A1A1A', '#1A1A1A')}
+variantes = {'color': (COLOR, '#1F3A2D', '#B5562B'), 'blanco': (mono('#FFFFFF'), '#FFFFFF', '#FFFFFF'), 'negro': (mono('#1A1A1A'), '#1A1A1A', '#1A1A1A')}
 os.makedirs(os.path.join(HERE, 'vectorial'), exist_ok=True)
 for nom, (c, w, d) in variantes.items():
     for fn, nm in ((horizontal, 'horizontal'), (vertical, 'vertical')):

@@ -3,7 +3,7 @@
 const { chromium } = require('playwright');
 const path = require('path'); const fs = require('fs');
 const SIN_TEXTO = process.env.SIN_TEXTO === '1';
-const BRAND = 'NORTE SOLAR', TAG = 'ZONA NORTE';
+const BRAND = 'ALBOR', TAG = 'ZONA NORTE';
 const U = p => 'file://' + path.resolve(__dirname, '..', p);
 const css = `
 @font-face{font-family:Fr;src:url(${U('fuentes/Fraunces-800.woff2')});font-weight:100 900}
@@ -19,13 +19,13 @@ h1{font-family:Fr;font-weight:800;line-height:1.05;position:absolute;left:80px;r
 .tag{position:absolute;right:80px;bottom:62px;font-size:26px;font-weight:700}
 .dots{position:absolute;left:50%;bottom:66px;transform:translateX(-50%);display:flex;gap:12px}
 .dots i{width:14px;height:14px;border-radius:50%;background:currentColor;opacity:.3}.dots i.on{opacity:1}
-.sun{position:absolute;right:-10px;bottom:200px;width:600px;height:600px;border-radius:50%;background:#F3E9D8}
+.sun{position:absolute;right:-10px;bottom:200px;width:600px;height:600px;border-radius:50%;background:#F7F2E7}
 `;
-const dark = '#5B3F2A', green = '#3E5A33', cream = '#F3E9D8', amber = '#E3B55A', ink = '#4A3322';
+const dark = '#1F3A2D', green = '#4E7A52', cream = '#F7F2E7', amber = '#D9A441', ink = '#26302A';
 const themes = {
   brown: `body{background:${dark};color:${cream}} em{font-style:normal;color:${amber}} .kick,.tag{color:${amber}}`,
-  cream: `body{background:${cream};color:${ink}} em{font-style:normal;color:#B5651D} .kick,.tag{color:${green}}`,
-  green: `body{background:${green};color:${cream}} em{font-style:normal;color:${amber}} .kick,.tag{color:${amber}}`,
+  cream: `body{background:${cream};color:${ink}} em{font-style:normal;color:#B5562B} .kick,.tag{color:${dark}}`,
+  green: `body{background:${green};color:${cream}} em{font-style:normal;color:#FFFFFF;text-decoration:underline;text-decoration-color:${amber};text-decoration-thickness:8px;text-underline-offset:10px} .kick,.tag{color:#FFFFFF}`,
 };
 const slides = [
   { t: 'brown', soli: 'explica', kick: 'SOLI TE EXPLICA', h: 'Se corta la luz. <em>¿Y tus paneles?</em>', body: 'La respuesta corta: depende. Deslizá y te cuento por qué.' },

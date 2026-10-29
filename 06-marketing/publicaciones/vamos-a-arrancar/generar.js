@@ -2,13 +2,13 @@
 const { chromium } = require('playwright'); const path = require('path'); const fs = require('fs');
 const U = p => 'file://' + path.resolve(__dirname, p);
 const temas = {
-  terracota: { card: '#B0532A', t: '#F3E9D8', s: '#D8E8B0', lab: '#F3E9D8' },
-  verde: { card: '#3E5A33', t: '#F3E9D8', s: '#E3B55A', lab: '#F3E9D8' },
+  terracota: { card: '#B5562B', t: '#F7F2E7', s: '#E3EFC4', lab: '#F7F2E7' },
+  verde: { card: '#1F3A2D', t: '#F7F2E7', s: '#D9A441', lab: '#F7F2E7' },
 };
 const css = c => `
 @font-face{font-family:Fr;src:url(${U('../../soli/fuentes/Fraunces-800.woff2')});font-weight:100 900}
 @font-face{font-family:DM;src:url(${U('../../soli/fuentes/DMSans-700.woff2')});font-weight:100 900}
-*{margin:0;box-sizing:border-box}body{width:1080px;height:1350px;background:#F3E9D8;position:relative;font-family:DM}
+*{margin:0;box-sizing:border-box}body{width:1080px;height:1350px;background:#F7F2E7;position:relative;font-family:DM}
 .card{position:absolute;left:70px;top:70px;right:70px;bottom:70px;border-radius:56px;background:${c.card};text-align:center;overflow:hidden}
 h1{font:800 124px/1.02 Fr;color:${c.t};margin-top:120px;letter-spacing:.01em}
 .s{font-weight:700;font-size:56px;line-height:1.25;color:${c.s};margin-top:48px}

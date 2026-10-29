@@ -18,7 +18,7 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 - Propuesta de acuerdo con los instaladores: `01-legal-admin/propuesta-instaladores/` (análisis interno: `01-legal-admin/propuesta-analisis-interno.md`).
 
 ## Datos clave
-- **Nombre de marca: Albor** (elegido 27/10/2026, "Albor Energía Solar"; logo A "sol naciente" en `06-marketing/logo/albor/`; paleta terracota #B0532A, verde #3E5A33, ocre #E3B55A, crema #F3E9D8, marrón #5B3F2A; tipografías Fraunces + DM Sans). Pendiente: chequear usuarios, dominios e INPI. Los archivos viejos dicen "Norte Solar".
+- **Nombre de marca: Albor** (elegido 27/10/2026, "Albor Energía Solar"; logo A "sol naciente" en `06-marketing/logo/albor/`; paleta **Bosque y Sol**: pino #1F3A2D (principal), sol #D9A441, terracota #B5562B (acento), hoja #4E7A52, arena #E4DCC8, crema #F7F2E7, tinta #26302A; tipografías Fraunces + DM Sans; ver `06-marketing/logo/albor/paletas-para-escalar.md`). Pendiente: chequear usuarios, dominios e INPI. Los archivos viejos dicen "Norte Solar".
 - Zona: Zona Norte del GBA, countries y barrios cerrados (Nordelta y similares), hasta La Plata. Viajes (por ejemplo, Costa Atlántica) se presupuestan aparte.
 - Público: nivel socioeconómico medio-alto y alto.
 - Capital inicial: $1.000.000 ARS, de los cuales $200.000 son para publicidad (Meta Ads).

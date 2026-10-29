@@ -3,7 +3,7 @@ const { chromium } = require('playwright'); const path = require('path'); const 
 const SCALE = Number(process.env.SCALE || 1), OUT = process.env.OUT || '.';
 fs.mkdirSync(path.join(__dirname, OUT), { recursive: true });
 const U = p => 'file://' + path.resolve(__dirname, p);
-const P = { terra: '#B0532A', verde: '#3E5A33', verde2: '#567A45', ocre: '#E3B55A', crema: '#F3E9D8', marron: '#5B3F2A' };
+const P = { terra: '#B5562B', verde: '#1F3A2D', verde2: '#4E7A52', ocre: '#D9A441', crema: '#F7F2E7', marron: '#26302A' };
 const polar = (cx, cy, r, a) => [cx + r * Math.cos(a), cy + r * Math.sin(a)];
 // símbolo: sol naciente con brote. c = {rays, sun, leaf1, leaf2, gap}
 function symbol(c) {
