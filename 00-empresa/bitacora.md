@@ -76,3 +76,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 29/10: al dueño le encantó el estilo 'objeto 3D + palabra gigante'. Hechas 5 piezas en ese estilo (4, 5, 8, 10, 11); grilla actualizada.
 - 30/10: el dueño pidió un set de 9 publicaciones 1:1 con otra paleta (navy/verde/lima) y su orden de grilla. Hecho en 06-marketing/feed/set-9-albor/ (imágenes, captions, generador). Cambios deliberados: sin porcentajes en la boleta, sin '30% menos' del aire, sin 'auditoría gratis' (análisis de boleta sin cargo), '4' gigante en vez de '3' en el post 7. Pendiente: elegir paleta definitiva (Bosque y Sol vs navy/verde/lima) y el logo en esa paleta.
 - 2/11: guía de lo que hay que tener en cuenta para Meta Ads en 06-marketing/checklist-meta-ads.md.
+- 2/11: paleta Bosque y Sol confirmada por el dueño. WhatsApp: por ahora responde él desde su celular. Falta definir el entregable de la boleta (propuesta enviada).

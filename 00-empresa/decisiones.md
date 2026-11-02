@@ -56,3 +56,7 @@
 
 ## 29/10 — Paleta oficial: Bosque y Sol
 - El dueño eligió la **opción 1 "Bosque y Sol"**: pino #1F3A2D, sol #D9A441, terracota #B5562B, hoja #4E7A52, arena #E4DCC8, crema #F7F2E7, tinta #26302A. Reemplaza a la paleta terracota/verde/ocre anterior. El esquema del feed a seguir está en `06-marketing/feed/esquema-feed.md`.
+
+## 2/11 — Paleta confirmada y WhatsApp provisorio
+- El dueño confirma **Bosque y Sol** (el esquema de `06-marketing/feed/grilla-perfil.png`). El set de 9 en navy/verde/lima queda descartado como diseño; se reutilizan sus textos y estructura rehechos en Bosque y Sol.
+- **WhatsApp provisorio:** responde el dueño desde su celular, con WhatsApp Business. Pendiente definir el entregable de quien manda su boleta.
