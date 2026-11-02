@@ -1,11 +1,11 @@
 # Hoja de ruta
 
-> **Foco actual (26/10/2026):** `plan-30-dias.md`: lanzar perfil con contenido y 3 anuncios en Meta. Todo lo demás está en pausa.
+> **Foco actual (2/11/2026):** `paso-a-paso.md` (qué hace el dueño, en orden). Meta: primera obra cobrada. Detalle de anuncios en `plan-30-dias.md`.
 
 Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 
 ## Etapa 1: Base (semanas 1 y 2)
-- [ ] Elegir el nombre definitivo de la marca (en revisión: Cénit, Boreal o Norte Solar). Ver `nombre-y-logo-meta.md`
+- [x] Elegir el nombre de la marca: **Albor** (27/10). Pendiente confirmar INPI y dominios
 - [ ] Verificar que el nombre esté libre: Instagram, Facebook, dominio .com.ar en NIC.ar, marca en INPI
 - [x] Validar las comisiones de Gustavo y Olivia
 - [x] Propuesta para instaladores armada (`01-legal-admin/propuesta-instaladores/`)
