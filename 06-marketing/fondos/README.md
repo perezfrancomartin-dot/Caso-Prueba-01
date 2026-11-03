@@ -10,3 +10,9 @@ Reglas: fondos sin texto ni personas; las imágenes con IA se marcan como tales 
 
 | Archivo | Modelo | Prompt |
 |---|---|---|
+
+## Voz y audio (probado 3/11)
+- **Voz (TTS):** `POST https://api.apimart.ai/v1/audio/speech` con `{"model":"gpt-4o-mini-tts","input":"...","voice":"ash","instructions":"Habla en español rioplatense..."}`. Devuelve el mp3 directo (síncrono). Hasta 4096 caracteres. Modelos: gpt-4o-mini-tts (acepta instrucciones de tono), tts-1 y tts-1-hd. La prueba salió bien en español; el acento no es rioplatense garantizado. Archivo: `06-marketing/audio/voz-prueba-soli.mp3`.
+- **Transcripción:** whisper-1. **Música:** Suno y Flow Music/Lyria.
+- Los modelos de video generan audio propio (sonidos ambiente), pero **no está confirmado el movimiento de labios con voz propia**: Soli se usa con voz en off.
+- La IA debe marcarse como tal; no clonar la voz de personas reales sin permiso.
