@@ -86,3 +86,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 3/11: voz elegida: coral (se nota IA). Probadas variantes más naturales en 06-marketing/audio/coral-*.mp3. Alternativa: voz propia con efecto.
 - 3/11: qué se puede automatizar con IA (SÍ / CON CONDICIONES / NO) en 00-empresa/automatizacion-ia.md y plantilla de procesos en procesos/_plantilla.md.
 - 3/11: imágenes ordenadas: carpeta 06-marketing/publicar/ (12 publicaciones, estado y captions) e INDICE.md de 06-marketing.
+- 3/11: landing Albor v1 (sin precios, sin contadores, sin obras inventadas) en 06-marketing/landing/albor-landing.html. Pendiente: número de WhatsApp real, Pixel ID, PNG del logo y matrícula COPIME antes de publicar.

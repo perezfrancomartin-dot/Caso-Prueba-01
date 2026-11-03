@@ -73,3 +73,8 @@
 
 ## 3/11 — Instalador nuevo
 - El dueño habló con una persona que **participó en una instalación comercial de 70 paneles** y trabajó en comercios (rol exacto a verificar). Estará disponible **solo sábados y domingos**, igual que el dueño. Candidata a capacitar y a liderar la primera obra. Gustavo cubre tareas de semana (compras, trámites). Pendiente: verificar su experiencia con la guía de reunión y definir el acuerdo.
+
+## 3/11 — Landing Albor
+- La landing no muestra contadores, "obras realizadas", años de trayectoria ni la matrícula COPIME hasta que sean reales (regla: nunca inventar obras ni testimonios). El sello de matrícula se activa cuando el dueño la tenga.
+- Calculadora: sistema estimado = boleta / 40.000 (200k = 5 kW, 400k = 10 kW); no muestra precio final.
+- La landing usa la paleta que pidió el dueño (Navy/Verde/Lima/Beige), distinta de "Bosque y Sol" de los logos. A confirmar cuál queda como oficial.
