@@ -80,3 +80,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 2/11: armado 00-empresa/paso-a-paso.md (bloques 1 a 8 hasta la primera obra) y hoja de ruta actualizada.
 - 3/11: el dueño pide cambiar el enfoque hacia el objetivo (empresa de instalación solar, futuro renovables/eco). Objetivo agregado a CLAUDE.md y decisiones.md. Pendiente: confirmar el nuevo enfoque con el dueño.
 - 3/11: nuevo plan de 4 semanas (00-empresa/plan-4-semanas.md): habilitación, líder de cuadrilla, números, primer cliente por contacto directo. Publicidad paga en pausa.
+- 3/11: nuevo instalador (ex-obra comercial de 70 paneles, solo fines de semana). Guía de reunión en 02-operaciones/guia-reunion-instalador.md.

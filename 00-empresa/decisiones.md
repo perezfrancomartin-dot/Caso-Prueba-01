@@ -70,3 +70,6 @@
 - **Reparto de mano de obra:** por porcentajes (ejemplo del dueño: 55 a 60 % para el líder, que paga a sus ayudantes). Se define por escrito y revisado por contador o abogado, con base en la mano de obra.
 - **Gasto mínimo:** publicidad paga en $0 por ahora. Se compra solo con obra confirmada y anticipo cobrado. Instalaciones solo fines de semana.
 - **Gustavo** quiere promocionar en sus historias: permitido solo con contenido de Albor y las reglas de `plan-4-semanas.md`.
+
+## 3/11 — Instalador nuevo
+- El dueño habló con una persona que **participó en una instalación comercial de 70 paneles** y trabajó en comercios (rol exacto a verificar). Estará disponible **solo sábados y domingos**, igual que el dueño. Candidata a capacitar y a liderar la primera obra. Gustavo cubre tareas de semana (compras, trámites). Pendiente: verificar su experiencia con la guía de reunión y definir el acuerdo.

@@ -16,6 +16,7 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 ## Equipo
 - **Dueño** (técnico electromecánico): no instala. Busca trabajos, maneja redes, presupuestos y compras. Disponible sábados y domingos: hace los relevamientos y puede ir a obra como ayudante. Tramita la matrícula.
 - **Pablito** (amigo de Gustavo): instalador líder de cuadrilla. Tiene experiencia instalando paneles. Monotributista. Disponibilidad a coordinar.
+- **Instalador nuevo** (nombre a completar): participó en una instalación comercial de 70 paneles y trabajó en comercios; candidato a líder de cuadrilla y capacitador. Solo sábados y domingos. Rol real y tarifa (porcentaje de mano de obra) a definir. Ver `02-operaciones/guia-reunion-instalador.md`.
 - **Gustavo**: electricista de buen nivel, sin experiencia en paneles. Ayudante en formación con camino a instalador. Monotributista. Disponible en la semana.
 - **Olivia** (atención al cliente, redes y administración): no técnica, ~4 h por día. Cobra comisión por venta cerrada (3 %).
 - Propuesta de acuerdo con los instaladores: `01-legal-admin/propuesta-instaladores/` (análisis interno: `01-legal-admin/propuesta-analisis-interno.md`).
