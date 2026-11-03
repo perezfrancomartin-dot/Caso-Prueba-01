@@ -60,3 +60,6 @@
 ## 2/11 — Paleta confirmada y WhatsApp provisorio
 - El dueño confirma **Bosque y Sol** (el esquema de `06-marketing/feed/grilla-perfil.png`). El set de 9 en navy/verde/lima queda descartado como diseño; se reutilizan sus textos y estructura rehechos en Bosque y Sol.
 - **WhatsApp provisorio:** responde el dueño desde su celular, con WhatsApp Business. Pendiente definir el entregable de quien manda su boleta.
+
+## 3/11 — Objetivo y cambio de enfoque
+- **Objetivo del dueño:** tener una empresa de instalación de paneles solares y, a futuro, apuntar a energías renovables y cosas eco friendly. Se revisa el enfoque: pasar de marca y contenido a **capacidad de entregar** (habilitación, equipo, costos, primer cliente). Detalle del nuevo enfoque en la respuesta del 3/11 y en `paso-a-paso.md`.

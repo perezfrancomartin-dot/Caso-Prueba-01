@@ -78,3 +78,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 2/11: guía de lo que hay que tener en cuenta para Meta Ads en 06-marketing/checklist-meta-ads.md.
 - 2/11: paleta Bosque y Sol confirmada por el dueño. WhatsApp: por ahora responde él desde su celular. Falta definir el entregable de la boleta (propuesta enviada).
 - 2/11: armado 00-empresa/paso-a-paso.md (bloques 1 a 8 hasta la primera obra) y hoja de ruta actualizada.
+- 3/11: el dueño pide cambiar el enfoque hacia el objetivo (empresa de instalación solar, futuro renovables/eco). Objetivo agregado a CLAUDE.md y decisiones.md. Pendiente: confirmar el nuevo enfoque con el dueño.

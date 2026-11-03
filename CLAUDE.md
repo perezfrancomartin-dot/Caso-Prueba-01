@@ -1,5 +1,8 @@
 # Contexto para Claude
 
+## OBJETIVO DEL DUEÑO (3/11/2026)
+**Tener una empresa de instalación de paneles solares y, en el futuro, apuntar a energías renovables y cosas eco friendly.** Todo trabajo se evalúa contra este objetivo: primero que la empresa pueda **entregar** (legal, técnica y económicamente) y recién después lo demás. Los servicios eléctricos generales no son foco.
+
 Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **instalación de paneles solares** (servicio principal) y **soluciones eléctricas en general** (servicio secundario), en Buenos Aires, Argentina.
 
 ## Cómo trabajar acá
