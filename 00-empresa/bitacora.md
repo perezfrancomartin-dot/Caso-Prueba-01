@@ -84,3 +84,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 3/11: APIMart tiene TTS (gpt-4o-mini-tts, tts-1, tts-1-hd), probado en español: 06-marketing/audio/voz-prueba-soli.mp3. Ver 06-marketing/fondos/README.md.
 - 3/11: probadas 5 voces estilo animado para Soli (coral, nova, shimmer, fable, sage) en 06-marketing/audio/. El dueño dijo que la primera era lenta y fea.
 - 3/11: voz elegida: coral (se nota IA). Probadas variantes más naturales en 06-marketing/audio/coral-*.mp3. Alternativa: voz propia con efecto.
+- 3/11: qué se puede automatizar con IA (SÍ / CON CONDICIONES / NO) en 00-empresa/automatizacion-ia.md y plantilla de procesos en procesos/_plantilla.md.
