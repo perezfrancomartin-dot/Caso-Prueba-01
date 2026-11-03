@@ -82,3 +82,4 @@ Resumen de lo hecho, para retomar en cualquier sesión nueva. Lo más reciente a
 - 3/11: nuevo plan de 4 semanas (00-empresa/plan-4-semanas.md): habilitación, líder de cuadrilla, números, primer cliente por contacto directo. Publicidad paga en pausa.
 - 3/11: nuevo instalador (ex-obra comercial de 70 paneles, solo fines de semana). Guía de reunión en 02-operaciones/guia-reunion-instalador.md.
 - 3/11: APIMart tiene TTS (gpt-4o-mini-tts, tts-1, tts-1-hd), probado en español: 06-marketing/audio/voz-prueba-soli.mp3. Ver 06-marketing/fondos/README.md.
+- 3/11: probadas 5 voces estilo animado para Soli (coral, nova, shimmer, fable, sage) en 06-marketing/audio/. El dueño dijo que la primera era lenta y fea.
