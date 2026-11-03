@@ -63,3 +63,10 @@
 
 ## 3/11 — Objetivo y cambio de enfoque
 - **Objetivo del dueño:** tener una empresa de instalación de paneles solares y, a futuro, apuntar a energías renovables y cosas eco friendly. Se revisa el enfoque: pasar de marca y contenido a **capacidad de entregar** (habilitación, equipo, costos, primer cliente). Detalle del nuevo enfoque en la respuesta del 3/11 y en `paso-a-paso.md`.
+
+## 3/11 — Nuevo plan de 4 semanas y decisiones del dueño
+- **Matrícula:** el dueño no la tiene. Camino doble: (1) contratar un profesional matriculado que firme y visite las obras, (2) investigar y tramitar la propia (Colegio de Técnicos PBA, Ley 10.411).
+- **Capacitación:** una persona que fue coordinadora de una cuadrilla de instalación solar va a capacitar al dueño y a Gustavo, y es candidata a líder de cuadrilla.
+- **Reparto de mano de obra:** por porcentajes (ejemplo del dueño: 55 a 60 % para el líder, que paga a sus ayudantes). Se define por escrito y revisado por contador o abogado, con base en la mano de obra.
+- **Gasto mínimo:** publicidad paga en $0 por ahora. Se compra solo con obra confirmada y anticipo cobrado. Instalaciones solo fines de semana.
+- **Gustavo** quiere promocionar en sus historias: permitido solo con contenido de Albor y las reglas de `plan-4-semanas.md`.

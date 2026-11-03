@@ -1,6 +1,6 @@
 # Hoja de ruta
 
-> **Foco actual (2/11/2026):** `paso-a-paso.md` (qué hace el dueño, en orden). Meta: primera obra cobrada. Detalle de anuncios en `plan-30-dias.md`.
+> **Foco actual (3/11/2026):** `plan-4-semanas.md` (capacidad de entregar: habilitación, equipo, números, primer cliente por contacto directo). Publicidad paga en pausa. Guía general: `paso-a-paso.md`.
 
 Marcá con [x] lo que se va haciendo. Fecha de inicio: 14/10/2026.
 
