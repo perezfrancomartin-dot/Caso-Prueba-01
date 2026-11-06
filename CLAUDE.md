@@ -31,3 +31,6 @@ Este repositorio es el "cerebro" de **Norte Solar**, una empresa nueva de **inst
 - Sistema de gestión publicado: https://claude.ai/artifact/5EheuufRYVNZ6UfrEkMJwQ (fuente en `08-sistema/`). Su base de datos tiene `clientes/*` y `config/precios`.
 - APIMart: desde 27/10 Claude puede usarla (API `https://api.apimart.ai/v1`, clave inyectada por el entorno, nunca en el repo). Ver `06-marketing/fondos/README.md`. Avisar el costo antes de generar varias imágenes.
 - Al terminar algo importante, actualizá `00-empresa/bitacora.md`.
+
+## Sublimación de camisetas (trabajo aparte)
+Si el dueño manda la foto o mockup de una camiseta para pasar a plano, seguí `10-sublimacion/README.md` al pie de la letra: entregar frente, espalda y mangas en **pleno 4K** con APIMart, sin preguntar de más.
