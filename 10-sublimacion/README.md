@@ -9,6 +9,11 @@ Tres PNG en **pleno** (rectángulo con el diseño de borde a borde, sin silueta 
 2. `pleno-espalda-<nombre>.png`: 3:4, 4K.
 3. `pleno-mangas-<nombre>.png`: 3:2, 4K, las dos mangas lado a lado con sus puños.
 
+4. `lamina-<nombre>.png`: **la entrega final**, todo en una sola lámina sobre fondo gris oscuro, como el ejemplo de referencia del dueño (6/11/2026): tira de cuello (color liso con sus vivos) | frente | espalda | las dos mangas apiladas, cada manga con el puño (vivo + banda lisa) en el borde de abajo. Se arma sin costo con `armar_lamina.py` a partir de las tres piezas.
+
+Las mangas conviene generarlas **apaisadas** (más anchas que altas) con el puño a lo largo del borde inferior, como en el ejemplo. El color de fondo tiene que ser **el mismo en todas las piezas**: revisarlo antes de armar la lámina.
+No agregar el logo del taller ni nada que no esté en la referencia (el taller lo pone).
+
 Se guardan con 300 dpi en los metadatos. 3584 × 4800 a 300 dpi cubre unos 30 × 40 cm; a 150 dpi (suficiente para sublimar) cubre unos 60 × 80 cm.
 
 ## Reglas del diseño
